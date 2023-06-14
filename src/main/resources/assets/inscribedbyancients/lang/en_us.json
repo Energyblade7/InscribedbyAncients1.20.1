@@ -1,0 +1,12 @@
+{
+  "creativemodetab.ancients_tab" : "Inscribed by Ancients",
+
+  "item.inscribedbyancients.nether_anthracite" : "Nether Anthracite",
+  "tooltip.inscribedbyancients.nether_anthracite.description" : "An otherworldly coal that is warm to the touch.",
+
+  "item.inscribedbyancients.rusted_artifact" : "Rusted Artifact",
+
+  "tooltip.inscribedbyancients.artifact.inscription" : "There is something inscribed here...",
+  "tooltip.inscribedbyancients.artifact.shift" : "Right-click with a Book & Quill in the Off-hand."
+
+}
