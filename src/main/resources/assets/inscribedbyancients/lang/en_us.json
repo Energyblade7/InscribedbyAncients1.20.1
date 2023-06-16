@@ -7,6 +7,16 @@
   "item.inscribedbyancients.rusted_artifact" : "Rusted Artifact",
 
   "tooltip.inscribedbyancients.artifact.inscription" : "There is something inscribed here...",
-  "tooltip.inscribedbyancients.artifact.shift" : "Right-click with a Book & Quill in the Off-hand."
+  "tooltip.inscribedbyancients.artifact.shift" : "Right-click with a Book & Quill in the Off-hand.",
+
+  "block.inscribedbyancients.inscribed_mossy_stone_bricks": "Inscribed Mossy Stone Bricks",
+  "block.inscribedbyancients.inscribed_cracked_stone_bricks": "Inscribed Cracked Stone Bricks",
+  "block.inscribedbyancients.inscribed_stone_bricks": "Inscribed Stone Bricks",
+  "block.inscribedbyancients.inscribed_deepslate_bricks": "Inscribed Deepslate Bricks",
+  "block.inscribedbyancients.inscribed_cracked_deepslate_bricks": "Inscribed Cracked Deepslate Bricks",
+  "block.inscribedbyancients.inscribed_deepslate_tiles": "Inscribed Deepslate Tiles",
+  "block.inscribedbyancients.inscribed_cracked_deepslate_tiles": "Inscribed Cracked Deepslate Tiles",
+
+  "block.inscribedbyancients.nether_anthracite_ore": "Nether Anthracite Ore"
 
 }

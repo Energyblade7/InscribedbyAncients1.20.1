@@ -1,8 +1,10 @@
 package net.Energyblade7.inscribedbyancients;
 
 import com.mojang.logging.LogUtils;
+import net.Energyblade7.inscribedbyancients.block.ModBlocks;
 import net.Energyblade7.inscribedbyancients.item.ModCreativeModeTabs;
 import net.Energyblade7.inscribedbyancients.item.ModItems;
+import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.api.distmarker.Dist;
@@ -31,8 +33,8 @@ public class InscribedbyAncients
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         ModCreativeModeTabs.register(modEventBus);
-
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         //------------------------------------------------------------------------------------
 
@@ -62,10 +64,35 @@ public class InscribedbyAncients
         if(event.getTab() == ModCreativeModeTabs.ANCIENTS_TAB.get()) {
             event.accept(ModItems.NETHER_ANTHRACITE);
             event.accept(ModItems.ANCIENT_RELIC);
+
+            event.accept(ModBlocks.INSCRIBED_MOSSY_STONE_BRICK);
+            event.accept(ModBlocks.INSCRIBED_CRACKED_STONE_BRICK);
+            event.accept(ModBlocks.INSCRIBED_STONE_BRICK);
+            event.accept(ModBlocks.INSCRIBED_DEEPSLATE_BRICK);
+            event.accept(ModBlocks.INSCRIBED_CRACKED_DEEPSLATE_BRICK);
+            event.accept(ModBlocks.INSCRIBED_DEEPSLATE_TILE);
+            event.accept(ModBlocks.INSCRIBED_CRACKED_DEEPSLATE_TILE);
+
+            event.accept(ModBlocks.NETHER_ANTHRACITE_ORE);
         }
 
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS)  {
             event.accept(ModItems.NETHER_ANTHRACITE);
+        }
+
+        if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
+            event.accept(ModBlocks.INSCRIBED_MOSSY_STONE_BRICK);
+            event.accept(ModBlocks.INSCRIBED_CRACKED_STONE_BRICK);
+            event.accept(ModBlocks.INSCRIBED_STONE_BRICK);
+            event.accept(ModBlocks.INSCRIBED_DEEPSLATE_BRICK);
+            event.accept(ModBlocks.INSCRIBED_CRACKED_DEEPSLATE_BRICK);
+            event.accept(ModBlocks.INSCRIBED_DEEPSLATE_TILE);
+            event.accept(ModBlocks.INSCRIBED_CRACKED_DEEPSLATE_TILE);
+
+        }
+
+        if(event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS){
+            event.accept(ModBlocks.NETHER_ANTHRACITE_ORE);
         }
     }
 
