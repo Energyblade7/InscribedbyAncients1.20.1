@@ -13,7 +13,7 @@ import net.minecraftforge.registries.RegistryObject;
 public class ModCreativeModeTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, InscribedbyAncients.MOD_ID);
     public static RegistryObject<CreativeModeTab> ANCIENTS_TAB = CREATIVE_MODE_TABS.register("ancients_tab", () -> CreativeModeTab.builder()
-            .icon(() -> new ItemStack(ModItems.NETHER_ANTHRACITE.get()))
+            .icon(() -> new ItemStack(ModItems.ARCHEOLOGISTS_JOURNAL.get()))
             .title(Component.translatable("creativemodetab.ancients_tab")).build());
 
     public static void register(IEventBus eventBus) {

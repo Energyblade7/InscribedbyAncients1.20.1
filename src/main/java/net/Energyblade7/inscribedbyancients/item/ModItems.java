@@ -1,6 +1,7 @@
 package net.Energyblade7.inscribedbyancients.item;
 
 import net.Energyblade7.inscribedbyancients.InscribedbyAncients;
+import net.Energyblade7.inscribedbyancients.item.custom.ArcheologistsJournal;
 import net.Energyblade7.inscribedbyancients.item.custom.ArtifactItem;
 import net.Energyblade7.inscribedbyancients.item.custom.FuelItem;
 import net.minecraft.world.item.Item;
@@ -14,6 +15,8 @@ public class ModItems {
             DeferredRegister.create(ForgeRegistries.ITEMS, InscribedbyAncients.MOD_ID);
 //---------------------------------------------------------------------------------------------------------------------
 
+    public static final RegistryObject<Item> ARCHEOLOGISTS_JOURNAL = ITEMS.register("archeologists_journal",
+            () -> new ArcheologistsJournal(new Item.Properties()));
     public static final RegistryObject<Item> NETHER_ANTHRACITE = ITEMS.register("nether_anthracite",
             () -> new FuelItem(4000, "tooltip.inscribedbyancients.nether_anthracite.description", new Item.Properties()));
     //Nether Anthracite Smelts for 10 Operations

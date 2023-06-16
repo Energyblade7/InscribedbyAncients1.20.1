@@ -62,6 +62,7 @@ public class InscribedbyAncients
     private void addCreative(BuildCreativeModeTabContentsEvent event)
     {
         if(event.getTab() == ModCreativeModeTabs.ANCIENTS_TAB.get()) {
+            event.accept(ModItems.ARCHEOLOGISTS_JOURNAL);
             event.accept(ModItems.NETHER_ANTHRACITE);
             event.accept(ModItems.ANCIENT_RELIC);
 

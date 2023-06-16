@@ -1,6 +1,9 @@
 {
   "creativemodetab.ancients_tab" : "Inscribed by Ancients",
 
+  "item.inscribedbyancients.archeologists_journal" : "Archeologists' Journal",
+  "tooltip.inscribedbyancients.archeologists_journal_1" : "Write down an ancient inscription with a Book & Quill to create.",
+
   "item.inscribedbyancients.nether_anthracite" : "Nether Anthracite",
   "tooltip.inscribedbyancients.nether_anthracite.description" : "An otherworldly coal that is warm to the touch.",
 
