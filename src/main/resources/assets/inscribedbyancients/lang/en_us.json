@@ -1,8 +1,18 @@
 {
   "creativemodetab.ancients_tab" : "Inscribed by Ancients",
 
+
+
+  "field.inscribedbyancients.empty": "",
+
+
+
   "item.inscribedbyancients.archeologists_journal" : "Archeologists' Journal",
-  "tooltip.inscribedbyancients.archeologists_journal_1" : "Write down an ancient inscription with a Book & Quill to create.",
+  "tooltip.inscribedbyancients.archeologists_journal.description" : "A Journal that keeps tracks of all that you've learned about an Ancient Civilization.",
+  "tooltip.inscribedbyancients.archeologists_journal.shift": "Right-click on an Inscribed Block to write down its phrase, Right-click while holding an Artifact with this book in your Off-Hand to write down its phrase.",
+
+
+
 
   "item.inscribedbyancients.nether_anthracite" : "Nether Anthracite",
   "tooltip.inscribedbyancients.nether_anthracite.description" : "An otherworldly coal that is warm to the touch.",
@@ -12,6 +22,9 @@
   "tooltip.inscribedbyancients.artifact.inscription" : "There is something inscribed here...",
   "tooltip.inscribedbyancients.artifact.shift" : "Right-click with a Book & Quill in the Off-hand.",
 
+
+
+
   "block.inscribedbyancients.inscribed_mossy_stone_bricks": "Inscribed Mossy Stone Bricks",
   "block.inscribedbyancients.inscribed_cracked_stone_bricks": "Inscribed Cracked Stone Bricks",
   "block.inscribedbyancients.inscribed_stone_bricks": "Inscribed Stone Bricks",
@@ -20,6 +33,14 @@
   "block.inscribedbyancients.inscribed_deepslate_tiles": "Inscribed Deepslate Tiles",
   "block.inscribedbyancients.inscribed_cracked_deepslate_tiles": "Inscribed Cracked Deepslate Tiles",
 
-  "block.inscribedbyancients.nether_anthracite_ore": "Nether Anthracite Ore"
+  "block.inscribedbyancients.nether_anthracite_ore": "Nether Anthracite Ore",
+
+
+
+  "advancements.inscribedbyancients.root.title": "Inscribed by Ancients",
+  "advancements.inscribedbyancients.root.description": "This land is old, explore in the right places and you might unearth something groundbreaking!",
+
+  "advancement.inscribedbyancients.write_that_down.title": "Write that down, WRITE THAT DOWN!",
+  "advancement.inscribedbyancients.write_that_down.description": "Use a Book & Quill to write down 5 ancient inscriptions to obtain the Archeologists' Journal"
 
 }

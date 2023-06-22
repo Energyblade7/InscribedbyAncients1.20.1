@@ -15,10 +15,18 @@ public class ArcheologistsJournal extends Item {
         super(properties);
     }
 
+
     @Override
     public void appendHoverText(ItemStack pStack, Level pLevel, List<Component> pTooltipComponent,
                                 TooltipFlag pIsAdvancedFlag) {
 
-        pTooltipComponent.add(Component.translatable("tooltip.inscribedbyancients.archeologists_journal_1").withStyle(ChatFormatting.GRAY));
+        if (Screen.hasShiftDown()) {
+            pTooltipComponent.add(Component.translatable("tooltip.inscribedbyancients.archeologists_journal.shift").withStyle(ChatFormatting.ITALIC));
+
+
+        } else {
+            pTooltipComponent.add(Component.translatable("tooltip.inscribedbyancients.archeologists_journal.description").withStyle(ChatFormatting.GRAY));
+
+        }
     }
 }

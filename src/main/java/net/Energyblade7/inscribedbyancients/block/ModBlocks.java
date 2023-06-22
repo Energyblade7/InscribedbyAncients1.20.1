@@ -29,44 +29,37 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> INSCRIBED_MOSSY_STONE_BRICK = registerBlock("inscribed_mossy_stone_bricks",
             () -> new InscribedBlocks(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)
-                    .strength(6F)
-                    .noLootTable()
+                    .strength(9F)
                     .requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> INSCRIBED_CRACKED_STONE_BRICK = registerBlock("inscribed_cracked_stone_bricks",
             () -> new InscribedBlocks(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)
-                    .strength(6F)
-                    .noLootTable()
+                    .strength(9F)
                     .requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> INSCRIBED_STONE_BRICK = registerBlock("inscribed_stone_bricks",
             () -> new InscribedBlocks(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)
-                    .strength(6F)
-                    .noLootTable()
+                    .strength(9F)
                     .requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> INSCRIBED_DEEPSLATE_BRICK = registerBlock("inscribed_deepslate_bricks",
             () -> new InscribedBlocks(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)
-                    .strength(6F)
-                    .noLootTable()
+                    .strength(9F)
                     .requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> INSCRIBED_CRACKED_DEEPSLATE_BRICK = registerBlock("inscribed_cracked_deepslate_bricks",
-            () -> new InscribedBlocks(BlockBehaviour.Properties.copy(Blocks.MOSSY_STONE_BRICKS)
-                    .strength(6F)
-                    .noLootTable()
+            () -> new InscribedBlocks(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)
+                    .strength(9F)
                     .requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> INSCRIBED_DEEPSLATE_TILE = registerBlock("inscribed_deepslate_tiles",
             () -> new InscribedBlocks(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)
-                    .strength(6F)
-                    .noLootTable()
+                    .strength(9F)
                     .requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> INSCRIBED_CRACKED_DEEPSLATE_TILE = registerBlock("inscribed_cracked_deepslate_tiles",
             () -> new InscribedBlocks(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)
-                    .strength(6F)
-                    .noLootTable()
+                    .strength(9F)
                     .requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> NETHER_ANTHRACITE_ORE = registerBlock("nether_anthracite_ore",

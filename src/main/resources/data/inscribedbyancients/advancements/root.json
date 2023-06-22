@@ -1,0 +1,33 @@
+{
+  "display": {
+    "icon": {
+      "item": "inscribedbyancients:archeologists_journal"
+    },
+    "title": {
+      "translate": "advancements.inscribedbyancients.root.title"
+    },
+    "description": {
+      "translate": "advancements.inscribedbyancients.root.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "background": "inscribedbyancients:textures/block/inscribed_cracked_stone_bricks.png"
+  },
+  "criteria": {
+    "killed_by_something": {
+      "conditions": {},
+      "trigger": "minecraft:entity_killed_player"
+    },
+    "killed_something": {
+      "conditions": {},
+      "trigger": "minecraft:player_killed_entity"
+    }
+  },
+  "requirements": [
+    [
+      "killed_something",
+      "killed_by_something"
+    ]
+  ]
+}
