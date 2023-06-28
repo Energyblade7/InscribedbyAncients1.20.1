@@ -16,7 +16,8 @@ public class ModItems {
 //---------------------------------------------------------------------------------------------------------------------
 
     public static final RegistryObject<Item> ARCHEOLOGISTS_JOURNAL = ITEMS.register("archeologists_journal",
-            () -> new ArcheologistsJournal(new Item.Properties()));
+            () -> new ArcheologistsJournal(new Item.Properties()
+                    .stacksTo(1)));
     public static final RegistryObject<Item> NETHER_ANTHRACITE = ITEMS.register("nether_anthracite",
             () -> new FuelItem(4000, "tooltip.inscribedbyancients.nether_anthracite.description", new Item.Properties()));
     //Nether Anthracite Smelts for 10 Operations

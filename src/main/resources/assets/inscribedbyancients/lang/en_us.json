@@ -23,7 +23,9 @@
   "tooltip.inscribedbyancients.artifact.shift" : "Right-click with a Book & Quill in the Off-hand.",
 
 
-
+  "block.inscribedbyancients.reclaimed_dirt": "Reclaimed Earth",
+  "block.inscribedbyancients.reclaimed_sand": "Reclaimed Sand",
+  "block.inscribedbyancients.reclaimed_gravel": "Reclaimed Rubble",
 
   "block.inscribedbyancients.inscribed_mossy_stone_bricks": "Inscribed Mossy Stone Bricks",
   "block.inscribedbyancients.inscribed_cracked_stone_bricks": "Inscribed Cracked Stone Bricks",
@@ -34,6 +36,7 @@
   "block.inscribedbyancients.inscribed_cracked_deepslate_tiles": "Inscribed Cracked Deepslate Tiles",
 
   "block.inscribedbyancients.nether_anthracite_ore": "Nether Anthracite Ore",
+  "block.inscribedbyancients.nether_anthracite_block": "Nether Anthracite Block",
 
 
 

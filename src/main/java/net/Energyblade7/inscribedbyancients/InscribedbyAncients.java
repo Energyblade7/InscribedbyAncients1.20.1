@@ -74,7 +74,12 @@ public class InscribedbyAncients
             event.accept(ModBlocks.INSCRIBED_DEEPSLATE_TILE);
             event.accept(ModBlocks.INSCRIBED_CRACKED_DEEPSLATE_TILE);
 
+            event.accept(ModBlocks.RECLAIMED_DIRT);
+            event.accept(ModBlocks.RECLAIMED_SAND);
+            event.accept(ModBlocks.RECLAIMED_GRAVEL);
+
             event.accept(ModBlocks.NETHER_ANTHRACITE_ORE);
+            event.accept(ModBlocks.NETHER_ANTHRACITE_BLOCK);
         }
 
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS)  {
@@ -90,10 +95,18 @@ public class InscribedbyAncients
             event.accept(ModBlocks.INSCRIBED_DEEPSLATE_TILE);
             event.accept(ModBlocks.INSCRIBED_CRACKED_DEEPSLATE_TILE);
 
+            event.accept(ModBlocks.NETHER_ANTHRACITE_BLOCK);
+
         }
 
         if(event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS){
             event.accept(ModBlocks.NETHER_ANTHRACITE_ORE);
+        }
+
+        if(event.getTabKey() == CreativeModeTabs.FUNCTIONAL_BLOCKS){
+            event.accept(ModBlocks.RECLAIMED_DIRT);
+            event.accept(ModBlocks.RECLAIMED_SAND);
+            event.accept(ModBlocks.RECLAIMED_GRAVEL);
         }
     }
 

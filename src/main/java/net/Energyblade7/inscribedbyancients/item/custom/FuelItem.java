@@ -12,18 +12,18 @@ import org.jetbrains.annotations.Nullable;
 import java.util.List;
 
 public class FuelItem extends Item {
-    private static int burn_time;
+    private static int burnTime;
     private static String description;
 
-    public FuelItem(int burnTime, String item_description, Properties pProperties) {
+    public FuelItem(int burnTime, String description, Properties pProperties) {
         super(pProperties);
-        burn_time = burnTime;
-        description = item_description;
+        this.burnTime = burnTime;
+        this.description = description;
     }
 
     @Override
     public int getBurnTime(ItemStack itemStack, @Nullable RecipeType<?> recipeType) {
-        return burn_time;
+        return burnTime;
     }
 
     @Override

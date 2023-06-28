@@ -2,6 +2,8 @@ package net.Energyblade7.inscribedbyancients.block;
 
 import net.Energyblade7.inscribedbyancients.InscribedbyAncients;
 import net.Energyblade7.inscribedbyancients.block.custom.InscribedBlocks;
+import net.Energyblade7.inscribedbyancients.block.custom.OreBlocks;
+import net.Energyblade7.inscribedbyancients.block.custom.ReclaimedEarths;
 import net.Energyblade7.inscribedbyancients.item.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -62,8 +64,28 @@ public class ModBlocks {
                     .strength(9F)
                     .requiresCorrectToolForDrops()));
 
+    public static final RegistryObject<Block> RECLAIMED_SAND = registerBlock("reclaimed_sand",
+            () -> new ReclaimedEarths(BlockBehaviour.Properties.copy(Blocks.SUSPICIOUS_SAND)
+                    .strength(9F)
+                    .requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> RECLAIMED_GRAVEL = registerBlock("reclaimed_gravel",
+            () -> new ReclaimedEarths(BlockBehaviour.Properties.copy(Blocks.SUSPICIOUS_GRAVEL)
+                    .strength(9F)
+                    .requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> RECLAIMED_DIRT = registerBlock("reclaimed_dirt",
+            () -> new ReclaimedEarths(BlockBehaviour.Properties.copy(Blocks.COARSE_DIRT)
+                    .strength(9F)
+                    .requiresCorrectToolForDrops()));
+
     public static final RegistryObject<Block> NETHER_ANTHRACITE_ORE = registerBlock("nether_anthracite_ore",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.NETHERRACK)
+            () -> new OreBlocks(3, BlockBehaviour.Properties.copy(Blocks.STONE)
+                    .strength(6F)
+                    .requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> NETHER_ANTHRACITE_BLOCK =registerBlock("nether_anthracite_block",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE)
                     .strength(6F)
                     .requiresCorrectToolForDrops()));
 
