@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+      "all": "inscribedbyancients:block/reclaimed_dirt_3"
+  }
+}

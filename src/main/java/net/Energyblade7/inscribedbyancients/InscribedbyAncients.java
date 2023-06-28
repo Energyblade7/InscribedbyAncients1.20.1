@@ -2,6 +2,7 @@ package net.Energyblade7.inscribedbyancients;
 
 import com.mojang.logging.LogUtils;
 import net.Energyblade7.inscribedbyancients.block.ModBlocks;
+import net.Energyblade7.inscribedbyancients.block.entity.ModBlockEntities;
 import net.Energyblade7.inscribedbyancients.item.ModCreativeModeTabs;
 import net.Energyblade7.inscribedbyancients.item.ModItems;
 import net.minecraft.world.item.CreativeModeTab;
@@ -35,6 +36,7 @@ public class InscribedbyAncients
         ModCreativeModeTabs.register(modEventBus);
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+        ModBlockEntities.register(modEventBus);
 
         //------------------------------------------------------------------------------------
 

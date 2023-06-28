@@ -3,8 +3,9 @@ package net.Energyblade7.inscribedbyancients.block;
 import net.Energyblade7.inscribedbyancients.InscribedbyAncients;
 import net.Energyblade7.inscribedbyancients.block.custom.InscribedBlocks;
 import net.Energyblade7.inscribedbyancients.block.custom.OreBlocks;
-import net.Energyblade7.inscribedbyancients.block.custom.ReclaimedEarths;
+import net.Energyblade7.inscribedbyancients.block.custom.ReclaimedBlocks;
 import net.Energyblade7.inscribedbyancients.item.ModItems;
+import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -45,39 +46,42 @@ public class ModBlocks {
                     .requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> INSCRIBED_DEEPSLATE_BRICK = registerBlock("inscribed_deepslate_bricks",
-            () -> new InscribedBlocks(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)
+            () -> new InscribedBlocks(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE_BRICKS)
                     .strength(9F)
                     .requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> INSCRIBED_CRACKED_DEEPSLATE_BRICK = registerBlock("inscribed_cracked_deepslate_bricks",
-            () -> new InscribedBlocks(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)
+            () -> new InscribedBlocks(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE_BRICKS)
                     .strength(9F)
                     .requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> INSCRIBED_DEEPSLATE_TILE = registerBlock("inscribed_deepslate_tiles",
-            () -> new InscribedBlocks(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)
+            () -> new InscribedBlocks(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE_BRICKS)
                     .strength(9F)
                     .requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> INSCRIBED_CRACKED_DEEPSLATE_TILE = registerBlock("inscribed_cracked_deepslate_tiles",
-            () -> new InscribedBlocks(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)
+            () -> new InscribedBlocks(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE_BRICKS)
                     .strength(9F)
                     .requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> RECLAIMED_SAND = registerBlock("reclaimed_sand",
-            () -> new ReclaimedEarths(BlockBehaviour.Properties.copy(Blocks.SUSPICIOUS_SAND)
-                    .strength(9F)
-                    .requiresCorrectToolForDrops()));
+            () -> new ReclaimedBlocks(Blocks.SAND, SoundEvents.BRUSH_SAND, SoundEvents.BRUSH_SAND_COMPLETED,
+                    BlockBehaviour.Properties.copy(Blocks.SUSPICIOUS_SAND)
+                            .strength(9F)
+                            .requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> RECLAIMED_GRAVEL = registerBlock("reclaimed_gravel",
-            () -> new ReclaimedEarths(BlockBehaviour.Properties.copy(Blocks.SUSPICIOUS_GRAVEL)
-                    .strength(9F)
-                    .requiresCorrectToolForDrops()));
+            () -> new ReclaimedBlocks(Blocks.GRAVEL, SoundEvents.BRUSH_GRAVEL, SoundEvents.BRUSH_GRAVEL_COMPLETED,
+                    BlockBehaviour.Properties.copy(Blocks.SUSPICIOUS_GRAVEL)
+                            .strength(9F)
+                            .requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> RECLAIMED_DIRT = registerBlock("reclaimed_dirt",
-            () -> new ReclaimedEarths(BlockBehaviour.Properties.copy(Blocks.COARSE_DIRT)
-                    .strength(9F)
-                    .requiresCorrectToolForDrops()));
+            () -> new ReclaimedBlocks(Blocks.COARSE_DIRT, SoundEvents.BRUSH_GRAVEL, SoundEvents.BRUSH_GRAVEL_COMPLETED,
+                    BlockBehaviour.Properties.copy(Blocks.SUSPICIOUS_GRAVEL)
+                            .strength(9F)
+                            .requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> NETHER_ANTHRACITE_ORE = registerBlock("nether_anthracite_ore",
             () -> new OreBlocks(3, BlockBehaviour.Properties.copy(Blocks.STONE)
