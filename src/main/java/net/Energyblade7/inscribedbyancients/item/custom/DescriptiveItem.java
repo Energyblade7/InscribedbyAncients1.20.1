@@ -5,25 +5,15 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
-import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.Level;
-import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
+public class DescriptiveItem extends Item {
 
-public class FuelItem extends Item {
-    private static int burnTime;
     private static String description;
-
-    public FuelItem(int burnTime, String description, Properties pProperties) {
-        super(pProperties);
-        this.burnTime = burnTime * 200;
+    public DescriptiveItem(String description, Properties properties) {
+        super(properties);
         this.description = description;
-    }
-
-    @Override
-    public int getBurnTime(ItemStack itemStack, @Nullable RecipeType<?> recipeType) {
-        return burnTime;
     }
 
     @Override

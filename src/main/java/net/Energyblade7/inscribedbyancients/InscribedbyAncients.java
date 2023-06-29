@@ -68,6 +68,8 @@ public class InscribedbyAncients
             event.accept(ModItems.NETHER_ANTHRACITE);
             event.accept(ModItems.ANCIENT_RELIC);
 
+            event.accept(ModItems.ANCIENT_ALLOY);
+
             event.accept(ModBlocks.INSCRIBED_MOSSY_STONE_BRICK);
             event.accept(ModBlocks.INSCRIBED_CRACKED_STONE_BRICK);
             event.accept(ModBlocks.INSCRIBED_STONE_BRICK);
@@ -82,10 +84,12 @@ public class InscribedbyAncients
 
             event.accept(ModBlocks.NETHER_ANTHRACITE_ORE);
             event.accept(ModBlocks.NETHER_ANTHRACITE_BLOCK);
+
         }
 
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS)  {
             event.accept(ModItems.NETHER_ANTHRACITE);
+            event.accept(ModItems.ANCIENT_ALLOY);
         }
 
         if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {

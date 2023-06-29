@@ -1,0 +1,34 @@
+{
+  "display": {
+    "icon": {
+      "item": "inscribedbyancients:rusted_artifact"
+    },
+    "title": {
+      "translate": "advancement.inscribedbyancients.reuse_reduce_recycle.title"
+    },
+    "description": {
+      "translate": "advancement.inscribedbyancients.reuse_reduce_recycle.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "inscribedbyancients:root",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "inscribedbyancients:ancient_alloy"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 10
+  }
+}

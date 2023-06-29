@@ -12,9 +12,11 @@ import net.minecraft.world.level.Level;
 import java.util.List;
 
 public class ArtifactItem extends Item {
-    public ArtifactItem(Item.Properties p_41383_) {
-        super(p_41383_);
 
+    private static String description;
+    public ArtifactItem(String description, Item.Properties p_41383_) {
+        super(p_41383_);
+        this.description = description;
     }
 
     @Override
@@ -22,11 +24,11 @@ public class ArtifactItem extends Item {
                                 TooltipFlag pIsAdvancedFlag) {
 
         if (Screen.hasShiftDown()) {
-            pTooltipComponent.add(Component.translatable("tooltip.inscribedbyancients.artifact.shift").withStyle(ChatFormatting.ITALIC));
+            pTooltipComponent.add(Component.translatable("tooltip.inscribedbyancients.artifactitem.shift").withStyle(ChatFormatting.ITALIC));
 
 
         } else {
-            pTooltipComponent.add(Component.translatable("tooltip.inscribedbyancients.artifact.inscription").withStyle(ChatFormatting.GRAY));
+            pTooltipComponent.add(Component.translatable(description).withStyle(ChatFormatting.GRAY));
 
         }
     }

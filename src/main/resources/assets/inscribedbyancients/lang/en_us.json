@@ -19,8 +19,12 @@
 
   "item.inscribedbyancients.rusted_artifact" : "Rusted Artifact",
 
-  "tooltip.inscribedbyancients.artifact.inscription" : "There is something inscribed here...",
-  "tooltip.inscribedbyancients.artifact.shift" : "Right-click with a Book & Quill in the Off-hand.",
+  "tooltip.inscribedbyancients.artifactitem.rustedartifact.description" : "An extremely old, rusted piece of metal that's been twisted and bent by the ages.",
+  "tooltip.inscribedbyancients.artifactitem.shift" : "There is something inscribed here...",
+
+
+  "item.inscribedbyancients.ancient_alloy": "Ancient Alloy",
+  "tooltip.inscribedbyancients.ancient_alloy.description": "A repurposed mass of an ancient metal who's manufacturing process has been long lost and forgotten.",
 
 
   "block.inscribedbyancients.reclaimed_dirt": "Reclaimed Earth",
@@ -43,7 +47,10 @@
   "advancements.inscribedbyancients.root.title": "Inscribed by Ancients",
   "advancements.inscribedbyancients.root.description": "This land is old, explore in the right places and you might unearth something groundbreaking!",
 
-  "advancement.inscribedbyancients.write_that_down.title": "Write that down, WRITE THAT DOWN!",
-  "advancement.inscribedbyancients.write_that_down.description": "Use a Book & Quill to write down 5 ancient inscriptions to obtain the Archeologists' Journal"
+  "advancement.inscribedbyancients.write_that_down.title": "WRITE THAT DOWN PATRICK!",
+  "advancement.inscribedbyancients.write_that_down.description": "Use a Book & Quill to write down 5 ancient inscriptions to obtain the Archeologists' Journal",
+
+  "advancement.inscribedbyancients.reuse_reduce_recycle.title": "Reuse, Reduce, Recycle!",
+  "advancement.inscribedbyancients.reuse_reduce_recycle.description": "Obtained Ancient Alloy by DESTROYING-- *ahem* 'recycling' a precious Artifact!"
 
 }

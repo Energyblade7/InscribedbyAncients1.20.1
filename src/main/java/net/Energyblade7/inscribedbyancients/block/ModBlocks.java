@@ -8,6 +8,8 @@ import net.Energyblade7.inscribedbyancients.item.ModItems;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -15,6 +17,7 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+import org.jetbrains.annotations.Nullable;
 
 import java.util.function.Supplier;
 
@@ -28,8 +31,16 @@ public class ModBlocks {
         registerBlockItem(name, toReturn);
         return toReturn;
     }
-    //-----------------------------------------------------------------------------------------------------------------
 
+    private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, int burnTime) {
+        RegistryObject<T> toReturn = BLOCKS.register(name, block);
+        registerFuelItem(name, toReturn, burnTime * 200);
+        return toReturn;
+    }
+
+
+    //-----------------------------------------------------------------------------------------------------------------
+    //Put the number of Smelting Operations a Fuel Object should get, not burn time!
     public static final RegistryObject<Block> INSCRIBED_MOSSY_STONE_BRICK = registerBlock("inscribed_mossy_stone_bricks",
             () -> new InscribedBlocks(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)
                     .strength(9F)
@@ -88,16 +99,26 @@ public class ModBlocks {
                     .strength(6F)
                     .requiresCorrectToolForDrops()));
 
-    public static final RegistryObject<Block> NETHER_ANTHRACITE_BLOCK =registerBlock("nether_anthracite_block",
+    public static final RegistryObject<Block> NETHER_ANTHRACITE_BLOCK = registerBlock("nether_anthracite_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE)
                     .strength(6F)
-                    .requiresCorrectToolForDrops()));
-
+                    .requiresCorrectToolForDrops())
+                    , 200);
 
    //------------------------------------------------------------------------------------------------------------------
+   //Put the number of Smelting Operations a Fuel Object should get, not burn time!
     private static <T extends Block> RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block) {
         return ModItems.ITEMS.register(name, () -> new BlockItem(block.get(),
                 new Item.Properties()));
+    }
+
+    private static <T extends Block> RegistryObject<Item> registerFuelItem(String name, RegistryObject<T> block, int burnTime) {
+        return ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()){
+            @Override
+            public int getBurnTime(ItemStack itemStack, @Nullable RecipeType<?> recipeType) {
+                return burnTime;
+            }
+        });
     }
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);
