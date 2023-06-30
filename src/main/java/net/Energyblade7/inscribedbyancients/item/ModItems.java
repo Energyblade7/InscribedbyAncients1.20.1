@@ -28,6 +28,15 @@ public class ModItems {
     public static final RegistryObject<Item> DAMAGED_TABLET = ITEMS.register("damaged_tablet",
             () -> new DamagedTablet(new Item.Properties()
                     .stacksTo(1)));
+
+    public static final RegistryObject<Item> EXPERIENCE_DRIVE = ITEMS.register("experience_drive",
+            () -> new ExperienceDrive("tooltip.inscribedbyancients.experience_drive.description", new Item.Properties()
+                    .stacksTo(1)));
+
+    public static final RegistryObject<Item> WEEPING_BLACKBOX = ITEMS.register("weeping_blackbox",
+            () -> new WeepingBlackbox("tooltip.inscribedbyancients.weeping_blackbox.description", new Item.Properties()
+                    .stacksTo(16)));
+
     public static final RegistryObject<Item> NETHER_ANTHRACITE = ITEMS.register("nether_anthracite",
             () -> new FuelItem(10, "tooltip.inscribedbyancients.nether_anthracite.description", new Item.Properties()));
 
@@ -42,6 +51,7 @@ public class ModItems {
     public static final RegistryObject<Item> ANTIQUE_APPARATUS = ITEMS.register("antique_apparatus",
             () -> new ArtifactItem("tooltip.inscribedbyancients.artifactitem.antique_apparatus.description", new Item.Properties()
                     .stacksTo(16)));
+
     public static final RegistryObject<Item> ANCIENT_ALLOY = ITEMS.register("ancient_alloy",
             () -> new DescriptiveItem("tooltip.inscribedbyancients.ancient_alloy.description", new Item.Properties()));
 
@@ -49,7 +59,7 @@ public class ModItems {
             () -> new DescriptiveItem("tooltip.inscribedbyancients.ether_bank.description", new Item.Properties()));
 
 
-//---------------------------------------------------------------------------------------------------------------------
+    //---------------------------------------------------------------------------------------------------------------------
 //Put the number of Smelting Operations a Fuel Object should get, not burn time!
     public static void register(IEventBus eventbus) {
         ITEMS.register(eventbus);

@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": 15,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "inscribedbyancients:battery"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "inscribedbyancients:rusted_artifact"
+        }
+      ]
+    }
+  ]
+}

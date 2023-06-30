@@ -1,0 +1,18 @@
+{
+  "structures": [
+    {
+      "structure": "inscribedbyancients:midterm_faux_castle",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "salt": 1778465312,
+
+    "spacing": 40,
+
+
+    "separation": 20,
+
+    "type": "minecraft:random_spread"
+  }
+}

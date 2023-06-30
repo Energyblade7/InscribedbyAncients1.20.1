@@ -10,6 +10,10 @@
     "inscribedbyancients:inscribed_deepslate_bricks",
     "inscribedbyancients:inscribed_cracked_deepslate_bricks",
     "inscribedbyancients:inscribed_deepslate_tiles",
-    "inscribedbyancients:inscribed_cracked_deepslate_tiles"
+    "inscribedbyancients:inscribed_cracked_deepslate_tiles",
+
+    "inscribedbyancients:compacted_reclaimation",
+    "inscribedbyancients:enriched_reclaimation",
+    "inscribedbyancients:mossy_reclaimation"
   ]
 }

@@ -71,6 +71,8 @@ public class InscribedbyAncients
             event.accept(ModItems.NETHER_ANTHRACITE);
             event.accept(ModItems.ANCIENT_ALLOY);
             event.accept(ModItems.ETHER_BANK);
+            event.accept(ModItems.EXPERIENCE_DRIVE);
+            event.accept(ModItems.WEEPING_BLACKBOX);
 
 
             event.accept(ModItems.ANCIENT_RELIC);
@@ -94,7 +96,15 @@ public class InscribedbyAncients
             event.accept(ModBlocks.NETHER_ANTHRACITE_ORE);
             event.accept(ModBlocks.NETHER_ANTHRACITE_BLOCK);
 
+            event.accept(ModBlocks.COMPACTED_RECLAIMATION);
+            event.accept(ModBlocks.ENRICHED_RECLAIMATION);
+            event.accept(ModBlocks.MOSSY_RECLAIMATION);
+            event.accept(ModBlocks.DRECK_MOSS);
+
+
         }
+
+
 
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS)  {
             event.accept(ModItems.NETHER_ANTHRACITE);
@@ -117,12 +127,22 @@ public class InscribedbyAncients
 
         if(event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS){
             event.accept(ModBlocks.NETHER_ANTHRACITE_ORE);
+
+            event.accept(ModBlocks.COMPACTED_RECLAIMATION);
+            event.accept(ModBlocks.ENRICHED_RECLAIMATION);
+            event.accept(ModBlocks.MOSSY_RECLAIMATION);
+            event.accept(ModBlocks.DRECK_MOSS);
         }
 
         if(event.getTabKey() == CreativeModeTabs.FUNCTIONAL_BLOCKS){
             event.accept(ModBlocks.RECLAIMED_DIRT);
             event.accept(ModBlocks.RECLAIMED_SAND);
             event.accept(ModBlocks.RECLAIMED_GRAVEL);
+        }
+
+        if(event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES){
+            event.accept(ModItems.EXPERIENCE_DRIVE);
+            event.accept(ModItems.WEEPING_BLACKBOX);
         }
     }
 

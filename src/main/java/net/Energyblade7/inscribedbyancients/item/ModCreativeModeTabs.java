@@ -16,8 +16,7 @@ public class ModCreativeModeTabs {
             .icon(() -> new ItemStack(ModItems.ARCHEOLOGISTS_JOURNAL.get()))
             .title(Component.translatable("creativemodetab.ancients_tab")).build());
 
-    public static void register(IEventBus eventBus) {
-        CREATIVE_MODE_TABS.register(eventBus);
+    public static void register(IEventBus eventBus) {CREATIVE_MODE_TABS.register(eventBus);
     }
 
 }

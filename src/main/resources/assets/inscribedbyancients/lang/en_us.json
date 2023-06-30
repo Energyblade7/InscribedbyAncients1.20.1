@@ -17,8 +17,11 @@
   "item.inscribedbyancients.ancient_datapad" : "Ancients' Scribelog",
   "tooltip.inscribedbyancients.ancient_datapad.description" : "A refurbished tablet from the ancient civilization. It may hold all the answers pertaining to these people, but only to those that can read their language...",
 
+  "item.inscribedbyancients.experience_drive" : "Experience Drive",
+  "tooltip.inscribedbyancients.experience_drive.description": "An esoteric slate that can store a large quantity of magic.  Right-click to store all EXP up to Level 30; Shift Right-click to retrieve all EXP on the Drive.",
 
-
+  "item.inscribedbyancients.weeping_blackbox" : "Weeping Blackbox",
+  "tooltip.inscribedbyancients.weeping_blackbox.description" : "An obsidian cube that is way too heavy for its size, however its contents still don't match its weight.  Can be broken to obtain otherworldly items.",
 
   "item.inscribedbyancients.nether_anthracite" : "Nether Anthracite",
   "tooltip.inscribedbyancients.nether_anthracite.description" : "An otherworldly coal that is warm to the touch.",
@@ -57,6 +60,16 @@
 
   "block.inscribedbyancients.nether_anthracite_ore": "Nether Anthracite Ore",
   "block.inscribedbyancients.nether_anthracite_block": "Nether Anthracite Block",
+
+  "block.inscribedbyancients.compacted_reclaimation": "Compacted Reclaimation",
+  "block.inscribedbyancients.enriched_reclaimation": "Enriched Reclaimation",
+  "block.inscribedbyancients.mossy_reclaimation": "Mossy Reclaimation",
+  "block.inscribedbyancients.dreck_moss": "Dreck Moss",
+
+  "block.inscribedbyancients.dreck_ginkgo_log": "Dreck Ginkgo Log",
+  "block.inscribedbyancients.stripped_dreck_ginkgo_log": "Stripped Dreck Ginkgo Log",
+  "block.inscribedbyancients.dreck_ginkgo_leaves": "Dreck Ginkgo Leaves",
+  "block.inscribedbyancients.dreck_ginkgo_sapling": "Dreck Ginkgo Sapling",
 
 
 
