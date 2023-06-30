@@ -17,9 +17,13 @@
   "item.inscribedbyancients.nether_anthracite" : "Nether Anthracite",
   "tooltip.inscribedbyancients.nether_anthracite.description" : "An otherworldly coal that is warm to the touch.",
 
-  "item.inscribedbyancients.rusted_artifact" : "Rusted Artifact",
 
+  "item.inscribedbyancients.rusted_artifact" : "Rusted Artifact",
   "tooltip.inscribedbyancients.artifactitem.rustedartifact.description" : "An extremely old, rusted piece of metal that's been twisted and bent by the ages.",
+
+  "item.inscribedbyancients.gnarled_effigy": "Gnarled Effigy",
+  "tooltip.inscribedbyancients.artifactitem.gnarledeffigy.description": "An eerie, archaic carving made of wood debased by time itself;  What it once represented is far beyond anyone's guess.",
+
   "tooltip.inscribedbyancients.artifactitem.shift" : "There is something inscribed here...",
 
 

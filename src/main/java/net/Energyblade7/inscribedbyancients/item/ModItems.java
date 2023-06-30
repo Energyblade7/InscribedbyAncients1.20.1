@@ -27,6 +27,10 @@ public class ModItems {
             () -> new ArtifactItem("tooltip.inscribedbyancients.artifactitem.rustedartifact.description", new Item.Properties()
                     .stacksTo(16)));
 
+    public static final RegistryObject<Item> GNARLED_EFFIGY = ITEMS.register("gnarled_effigy",
+            () -> new ArtifactItem("tooltip.inscribedbyancients.artifactitem.gnarledeffigy.description", new Item.Properties()
+                    .stacksTo(16)));
+
     public static final RegistryObject<Item> ANCIENT_ALLOY = ITEMS.register("ancient_alloy",
             () -> new DescriptiveItem("tooltip.inscribedbyancients.ancient_alloy.description", new Item.Properties()));
 

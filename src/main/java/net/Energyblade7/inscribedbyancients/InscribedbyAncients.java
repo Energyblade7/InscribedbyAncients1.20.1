@@ -66,9 +66,12 @@ public class InscribedbyAncients
         if(event.getTab() == ModCreativeModeTabs.ANCIENTS_TAB.get()) {
             event.accept(ModItems.ARCHEOLOGISTS_JOURNAL);
             event.accept(ModItems.NETHER_ANTHRACITE);
-            event.accept(ModItems.ANCIENT_RELIC);
-
             event.accept(ModItems.ANCIENT_ALLOY);
+
+
+            event.accept(ModItems.ANCIENT_RELIC);
+            event.accept(ModItems.GNARLED_EFFIGY);
+
 
             event.accept(ModBlocks.INSCRIBED_MOSSY_STONE_BRICK);
             event.accept(ModBlocks.INSCRIBED_CRACKED_STONE_BRICK);
