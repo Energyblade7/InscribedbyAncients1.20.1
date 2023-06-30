@@ -14,8 +14,8 @@
   "item.inscribedbyancients.damaged_tablet" : "Damaged Tablet",
   "tooltip.inscribedbyancients.damaged_tablet.description": "A common enough dig found in ancient ruins, most people salvage them for the components found inside, but maybe there is another way to utilize this artifact...",
 
-  "item.inscribedbyancients.ancient_datapad" : "Ancient Datapad",
-  "tooltip.inscribedbyancients.ancient_datapad.description" : "A refurbished Datapad from an ancient civilization. It may store all then answers pertaining to these people, but only to those that can read their language...",
+  "item.inscribedbyancients.ancient_datapad" : "Ancients' Scribelog",
+  "tooltip.inscribedbyancients.ancient_datapad.description" : "A refurbished tablet from the ancient civilization. It may hold all the answers pertaining to these people, but only to those that can read their language...",
 
 
 
@@ -40,7 +40,7 @@
   "tooltip.inscribedbyancients.ancient_alloy.description": "A repurposed mass of an ancient metal who's manufacturing process has been long lost and forgotten.",
 
   "item.inscribedbyancients.ether_bank" : "Ether Bank",
-  "tooltip.inscribedbyancients.ether_bank.description" : "A decorated crystal with a strange viridescent glow about it.  It's known to be used in a myriad of ancient devices, presumably as a power source.",
+  "tooltip.inscribedbyancients.ether_bank.description" : "A viridescent crystal with a buzzing aura about it.  It's known to be used in a myriad of ancient devices, presumably as a power source.",
 
 
   "block.inscribedbyancients.reclaimed_dirt": "Reclaimed Earth",
@@ -67,7 +67,7 @@
   "advancement.inscribedbyancients.write_that_down.description": "Use a Book & Quill to write down 5 ancient inscriptions to obtain the Archeologists' Journal",
 
   "advancement.inscribedbyancients.the_latest_model.title" : "The Latest Model!",
-  "advancement.inscribedbyancients.the_latest_model.description": "Repaired a Damaged Tablet and obtained the Ancient Datapad!",
+  "advancement.inscribedbyancients.the_latest_model.description": "Repaired a Damaged Tablet and obtained the Ancients' Scribelog!",
 
   "advancement.inscribedbyancients.reuse_reduce_recycle.title": "Reuse, Reduce, Recycle!",
   "advancement.inscribedbyancients.reuse_reduce_recycle.description": "Obtained Ancient Alloy by DESTROYING-- *ahem* 'recycling' a precious Artifact!"
