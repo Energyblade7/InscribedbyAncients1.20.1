@@ -1,10 +1,7 @@
 package net.Energyblade7.inscribedbyancients.item;
 
 import net.Energyblade7.inscribedbyancients.InscribedbyAncients;
-import net.Energyblade7.inscribedbyancients.item.custom.ArcheologistsJournal;
-import net.Energyblade7.inscribedbyancients.item.custom.ArtifactItem;
-import net.Energyblade7.inscribedbyancients.item.custom.DescriptiveItem;
-import net.Energyblade7.inscribedbyancients.item.custom.FuelItem;
+import net.Energyblade7.inscribedbyancients.item.custom.*;
 
 import net.minecraft.world.item.Item;
 
@@ -23,6 +20,14 @@ public class ModItems {
     public static final RegistryObject<Item> ARCHEOLOGISTS_JOURNAL = ITEMS.register("archeologists_journal",
             () -> new ArcheologistsJournal(new Item.Properties()
                     .stacksTo(1)));
+
+    public static final RegistryObject<Item> ANCIENT_DATAPAD = ITEMS.register("ancient_datapad",
+            () -> new AncientDatapad(new Item.Properties()
+                    .stacksTo(1)));
+
+    public static final RegistryObject<Item> DAMAGED_TABLET = ITEMS.register("damaged_tablet",
+            () -> new DamagedTablet(new Item.Properties()
+                    .stacksTo(1)));
     public static final RegistryObject<Item> NETHER_ANTHRACITE = ITEMS.register("nether_anthracite",
             () -> new FuelItem(10, "tooltip.inscribedbyancients.nether_anthracite.description", new Item.Properties()));
 
@@ -39,6 +44,9 @@ public class ModItems {
                     .stacksTo(16)));
     public static final RegistryObject<Item> ANCIENT_ALLOY = ITEMS.register("ancient_alloy",
             () -> new DescriptiveItem("tooltip.inscribedbyancients.ancient_alloy.description", new Item.Properties()));
+
+    public static final RegistryObject<Item> ETHER_BANK = ITEMS.register("ether_bank",
+            () -> new DescriptiveItem("tooltip.inscribedbyancients.ether_bank.description", new Item.Properties()));
 
 
 //---------------------------------------------------------------------------------------------------------------------

@@ -65,13 +65,18 @@ public class InscribedbyAncients
     {
         if(event.getTab() == ModCreativeModeTabs.ANCIENTS_TAB.get()) {
             event.accept(ModItems.ARCHEOLOGISTS_JOURNAL);
+            event.accept(ModItems.ANCIENT_DATAPAD);
+
+
             event.accept(ModItems.NETHER_ANTHRACITE);
             event.accept(ModItems.ANCIENT_ALLOY);
+            event.accept(ModItems.ETHER_BANK);
 
 
             event.accept(ModItems.ANCIENT_RELIC);
             event.accept(ModItems.GNARLED_EFFIGY);
             event.accept(ModItems.ANTIQUE_APPARATUS);
+            event.accept(ModItems.DAMAGED_TABLET);
 
 
             event.accept(ModBlocks.INSCRIBED_MOSSY_STONE_BRICK);
@@ -94,6 +99,7 @@ public class InscribedbyAncients
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS)  {
             event.accept(ModItems.NETHER_ANTHRACITE);
             event.accept(ModItems.ANCIENT_ALLOY);
+            event.accept(ModItems.ETHER_BANK);
         }
 
         if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {

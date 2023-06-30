@@ -1,0 +1,28 @@
+{
+  "name": "inscribedbyancients:generic_ruins_small/start_pool",
+
+
+  "fallback": "minecraft:empty",
+
+  "elements": [
+    {
+
+
+      "weight": 1,
+      "element": {
+
+
+        "location": "inscribedbyancients:generic_ruins_small",
+
+
+        "processors": "minecraft:empty",
+
+
+        "projection": "rigid",
+
+
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}

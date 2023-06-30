@@ -12,6 +12,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.BrushableBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -77,22 +78,27 @@ public class ModBlocks {
                     .requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> RECLAIMED_SAND = registerBlock("reclaimed_sand",
-            () -> new ReclaimedBlocks(Blocks.SAND, SoundEvents.BRUSH_SAND, SoundEvents.BRUSH_SAND_COMPLETED,
+            () -> new BrushableBlock(Blocks.SAND,
                     BlockBehaviour.Properties.copy(Blocks.SUSPICIOUS_SAND)
                             .strength(9F)
-                            .requiresCorrectToolForDrops()));
+                            .requiresCorrectToolForDrops(),
+                    SoundEvents.BRUSH_SAND,
+                    SoundEvents.BRUSH_SAND_COMPLETED));
 
     public static final RegistryObject<Block> RECLAIMED_GRAVEL = registerBlock("reclaimed_gravel",
-            () -> new ReclaimedBlocks(Blocks.GRAVEL, SoundEvents.BRUSH_GRAVEL, SoundEvents.BRUSH_GRAVEL_COMPLETED,
-                    BlockBehaviour.Properties.copy(Blocks.SUSPICIOUS_GRAVEL)
+            () -> new BrushableBlock(Blocks.GRAVEL, BlockBehaviour.Properties.copy(Blocks.SUSPICIOUS_GRAVEL)
                             .strength(9F)
-                            .requiresCorrectToolForDrops()));
+                            .requiresCorrectToolForDrops(),
+                    SoundEvents.BRUSH_GRAVEL,
+                    SoundEvents.BRUSH_GRAVEL_COMPLETED));
 
     public static final RegistryObject<Block> RECLAIMED_DIRT = registerBlock("reclaimed_dirt",
-            () -> new ReclaimedBlocks(Blocks.COARSE_DIRT, SoundEvents.BRUSH_GRAVEL, SoundEvents.BRUSH_GRAVEL_COMPLETED,
+            () -> new BrushableBlock(Blocks.COARSE_DIRT,
                     BlockBehaviour.Properties.copy(Blocks.SUSPICIOUS_GRAVEL)
                             .strength(9F)
-                            .requiresCorrectToolForDrops()));
+                            .requiresCorrectToolForDrops(),
+                    SoundEvents.BRUSH_GRAVEL,
+                    SoundEvents.BRUSH_GRAVEL_COMPLETED));
 
     public static final RegistryObject<Block> NETHER_ANTHRACITE_ORE = registerBlock("nether_anthracite_ore",
             () -> new OreBlocks(3, BlockBehaviour.Properties.copy(Blocks.STONE)

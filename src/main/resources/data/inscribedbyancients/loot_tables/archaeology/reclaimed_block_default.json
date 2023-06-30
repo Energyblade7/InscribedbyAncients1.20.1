@@ -1,0 +1,57 @@
+{
+  "type": "minecraft:archaeology",
+  "pools": [
+    {
+      "rolls": 1.0,
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "inscribedbyancients:rusted_artifact"
+
+        },
+        {
+          "type": "minecraft:item",
+          "name": "inscribedbyancients:gnarled_effigy"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "inscribedbyancients:antique_apparatus"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "inscribedbyancients:ether_bank"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "inscribedbyancients:damaged_tablet"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:glass_bottle"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:iron_ingot"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:iron_bars"
+
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:gold_nugget"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:charcoal"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:music_disc_relic"
+        }
+      ]
+    }
+  ]
+}

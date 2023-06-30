@@ -1,0 +1,35 @@
+{
+  "display": {
+    "icon": {
+      "item": "inscribedbyancients:ancient_datapad"
+    },
+    "title": {
+      "translate": "advancement.inscribedbyancients.the_latest_model.title"
+    },
+    "description": {
+      "translate": "advancement.inscribedbyancients.the_latest_model.description"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "parent": "inscribedbyancients:write_that_down",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "inscribedbyancients:ancient_datapad"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 20
+  }
+}
