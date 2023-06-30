@@ -71,6 +71,7 @@ public class InscribedbyAncients
 
             event.accept(ModItems.ANCIENT_RELIC);
             event.accept(ModItems.GNARLED_EFFIGY);
+            event.accept(ModItems.ANTIQUE_APPARATUS);
 
 
             event.accept(ModBlocks.INSCRIBED_MOSSY_STONE_BRICK);

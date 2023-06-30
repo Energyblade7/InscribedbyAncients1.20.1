@@ -10,7 +10,7 @@ import net.minecraft.world.level.Level;
 import java.util.List;
 public class DescriptiveItem extends Item {
 
-    private static String description;
+    private String description;
     public DescriptiveItem(String description, Properties properties) {
         super(properties);
         this.description = description;

@@ -13,7 +13,7 @@ import java.util.List;
 
 public class ArtifactItem extends Item {
 
-    private static String description;
+    private String description;
     public ArtifactItem(String description, Item.Properties p_41383_) {
         super(p_41383_);
         this.description = description;

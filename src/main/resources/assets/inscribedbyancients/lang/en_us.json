@@ -19,10 +19,13 @@
 
 
   "item.inscribedbyancients.rusted_artifact" : "Rusted Artifact",
-  "tooltip.inscribedbyancients.artifactitem.rustedartifact.description" : "An extremely old, rusted piece of metal that's been twisted and bent by the ages.",
+  "tooltip.inscribedbyancients.artifactitem.rusted_artifact.description" : "An extremely old, rusted piece of metal that's been twisted and bent by the ages.",
+
+  "item.inscribedbyancients.antique_apparatus": "Antique Apparatus",
+  "tooltip.inscribedbyancients.artifactitem.antique_apparatus.description": "A curious device thought to be a sort of Spyglass.  Its lens has long since been shattered.",
 
   "item.inscribedbyancients.gnarled_effigy": "Gnarled Effigy",
-  "tooltip.inscribedbyancients.artifactitem.gnarledeffigy.description": "An eerie, archaic carving made of wood debased by time itself;  What it once represented is far beyond anyone's guess.",
+  "tooltip.inscribedbyancients.artifactitem.gnarled_effigy.description": "An eerie, archaic carving made of wood debased by time itself;  What it once depicted is far beyond anyone's guess.",
 
   "tooltip.inscribedbyancients.artifactitem.shift" : "There is something inscribed here...",
 

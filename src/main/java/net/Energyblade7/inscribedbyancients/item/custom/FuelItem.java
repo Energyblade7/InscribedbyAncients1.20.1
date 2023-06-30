@@ -12,8 +12,8 @@ import org.jetbrains.annotations.Nullable;
 import java.util.List;
 
 public class FuelItem extends Item {
-    private static int burnTime;
-    private static String description;
+    private int burnTime;
+    private String description;
 
     public FuelItem(int burnTime, String description, Properties pProperties) {
         super(pProperties);
