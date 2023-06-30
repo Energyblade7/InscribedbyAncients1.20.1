@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/orientable",
-  "textures": {
-    "side":"minecraft:block/cracked_deepslate_bricks",
-    "top":"minecraft:block/cracked_deepslate_bricks",
-    "front":"inscribedbyancients:block/inscribed_cracked_deepslate_bricks"
-  }
-}

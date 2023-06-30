@@ -3,7 +3,6 @@
 
 
 
-  "field.inscribedbyancients.empty": "",
 
 
 
@@ -83,6 +82,8 @@
   "advancement.inscribedbyancients.the_latest_model.description": "Repaired a Damaged Tablet and obtained the Ancients' Scribelog!",
 
   "advancement.inscribedbyancients.reuse_reduce_recycle.title": "Reuse, Reduce, Recycle!",
-  "advancement.inscribedbyancients.reuse_reduce_recycle.description": "Obtained Ancient Alloy by DESTROYING-- *ahem* 'recycling' a precious Artifact!"
+  "advancement.inscribedbyancients.reuse_reduce_recycle.description": "Obtained Ancient Alloy by DESTROYING-- *ahem* 'recycling' a precious Artifact!",
+
+  "container.crafting.testblock": "Test Block"
 
 }

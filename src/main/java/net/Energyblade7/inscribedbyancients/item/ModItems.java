@@ -18,15 +18,15 @@ public class ModItems {
 //---------------------------------------------------------------------------------------------------------------------
 //Put the number of Smelting Operations a Fuel Object should get, not burn time!
     public static final RegistryObject<Item> ARCHEOLOGISTS_JOURNAL = ITEMS.register("archeologists_journal",
-            () -> new ArcheologistsJournal(new Item.Properties()
+            () -> new ArcheologistsJournal("tooltip.inscribedbyancients.archeologists_journal.description", new Item.Properties()
                     .stacksTo(1)));
 
     public static final RegistryObject<Item> ANCIENT_DATAPAD = ITEMS.register("ancient_datapad",
-            () -> new AncientDatapad(new Item.Properties()
+            () -> new AncientDatapad("tooltip.inscribedbyancients.ancient_datapad.description", new Item.Properties()
                     .stacksTo(1)));
 
     public static final RegistryObject<Item> DAMAGED_TABLET = ITEMS.register("damaged_tablet",
-            () -> new DamagedTablet(new Item.Properties()
+            () -> new DamagedTablet("tooltip.inscribedbyancients.damaged_tablet.description", new Item.Properties()
                     .stacksTo(1)));
 
     public static final RegistryObject<Item> EXPERIENCE_DRIVE = ITEMS.register("experience_drive",
@@ -38,7 +38,8 @@ public class ModItems {
                     .stacksTo(16)));
 
     public static final RegistryObject<Item> NETHER_ANTHRACITE = ITEMS.register("nether_anthracite",
-            () -> new FuelItem(10, "tooltip.inscribedbyancients.nether_anthracite.description", new Item.Properties()));
+            () -> new FuelItem("tooltip.inscribedbyancients.nether_anthracite.description", new Item.Properties()
+                    , 10));
 
     public static final RegistryObject<Item> ANCIENT_RELIC = ITEMS.register("rusted_artifact",
             () -> new ArtifactItem("tooltip.inscribedbyancients.artifactitem.rusted_artifact.description", new Item.Properties()
@@ -53,10 +54,10 @@ public class ModItems {
                     .stacksTo(16)));
 
     public static final RegistryObject<Item> ANCIENT_ALLOY = ITEMS.register("ancient_alloy",
-            () -> new DescriptiveItem("tooltip.inscribedbyancients.ancient_alloy.description", new Item.Properties()));
+            () -> new ModItem("tooltip.inscribedbyancients.ancient_alloy.description", new Item.Properties()));
 
     public static final RegistryObject<Item> ETHER_BANK = ITEMS.register("ether_bank",
-            () -> new DescriptiveItem("tooltip.inscribedbyancients.ether_bank.description", new Item.Properties()));
+            () -> new ModItem("tooltip.inscribedbyancients.ether_bank.description", new Item.Properties()));
 
 
     //---------------------------------------------------------------------------------------------------------------------

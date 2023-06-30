@@ -1,9 +1,0 @@
-{
-  "variants" : {
-    "facing=north": {"model": "inscribedbyancients:block/inscribed_cracked_stone_bricks"},
-    "facing=east": {"model": "inscribedbyancients:block/inscribed_cracked_stone_bricks", "y": 90},
-    "facing=south": {"model": "inscribedbyancients:block/inscribed_cracked_stone_bricks", "y":  180},
-    "facing=west": {"model": "inscribedbyancients:block/inscribed_cracked_stone_bricks", "y": 270}
-
-  }
-}

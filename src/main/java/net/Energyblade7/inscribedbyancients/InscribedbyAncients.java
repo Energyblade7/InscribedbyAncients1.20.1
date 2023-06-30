@@ -5,7 +5,6 @@ import net.Energyblade7.inscribedbyancients.block.ModBlocks;
 import net.Energyblade7.inscribedbyancients.block.entity.ModBlockEntities;
 import net.Energyblade7.inscribedbyancients.item.ModCreativeModeTabs;
 import net.Energyblade7.inscribedbyancients.item.ModItems;
-import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.api.distmarker.Dist;
@@ -40,8 +39,6 @@ public class InscribedbyAncients
 
         //------------------------------------------------------------------------------------
 
-        // Register the commonSetup method for modloading
-        modEventBus.addListener(this::commonSetup);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
@@ -54,12 +51,6 @@ public class InscribedbyAncients
 
     }
 
-    private void commonSetup(final FMLCommonSetupEvent event)
-    {
-        // Some common setup code
-        LOGGER.info("HELLO FROM COMMON SETUP");
-        LOGGER.info("DIRT BLOCK >> {}", ForgeRegistries.BLOCKS.getKey(Blocks.DIRT));
-    }
 
     private void addCreative(BuildCreativeModeTabContentsEvent event)
     {
@@ -81,14 +72,6 @@ public class InscribedbyAncients
             event.accept(ModItems.DAMAGED_TABLET);
 
 
-            event.accept(ModBlocks.INSCRIBED_MOSSY_STONE_BRICK);
-            event.accept(ModBlocks.INSCRIBED_CRACKED_STONE_BRICK);
-            event.accept(ModBlocks.INSCRIBED_STONE_BRICK);
-            event.accept(ModBlocks.INSCRIBED_DEEPSLATE_BRICK);
-            event.accept(ModBlocks.INSCRIBED_CRACKED_DEEPSLATE_BRICK);
-            event.accept(ModBlocks.INSCRIBED_DEEPSLATE_TILE);
-            event.accept(ModBlocks.INSCRIBED_CRACKED_DEEPSLATE_TILE);
-
             event.accept(ModBlocks.RECLAIMED_DIRT);
             event.accept(ModBlocks.RECLAIMED_SAND);
             event.accept(ModBlocks.RECLAIMED_GRAVEL);
@@ -101,7 +84,6 @@ public class InscribedbyAncients
             event.accept(ModBlocks.MOSSY_RECLAIMATION);
             event.accept(ModBlocks.DRECK_MOSS);
 
-
         }
 
 
@@ -113,14 +95,6 @@ public class InscribedbyAncients
         }
 
         if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
-            event.accept(ModBlocks.INSCRIBED_MOSSY_STONE_BRICK);
-            event.accept(ModBlocks.INSCRIBED_CRACKED_STONE_BRICK);
-            event.accept(ModBlocks.INSCRIBED_STONE_BRICK);
-            event.accept(ModBlocks.INSCRIBED_DEEPSLATE_BRICK);
-            event.accept(ModBlocks.INSCRIBED_CRACKED_DEEPSLATE_BRICK);
-            event.accept(ModBlocks.INSCRIBED_DEEPSLATE_TILE);
-            event.accept(ModBlocks.INSCRIBED_CRACKED_DEEPSLATE_TILE);
-
             event.accept(ModBlocks.NETHER_ANTHRACITE_BLOCK);
 
         }

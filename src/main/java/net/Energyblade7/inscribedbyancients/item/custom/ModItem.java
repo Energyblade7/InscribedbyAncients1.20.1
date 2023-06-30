@@ -2,20 +2,18 @@ package net.Energyblade7.inscribedbyancients.item.custom;
 
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.Style;
-import net.minecraft.world.InteractionResult;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
-import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
 
 import java.util.List;
-public class DescriptiveItem extends Item {
+public class ModItem extends Item {
 
-    private String description;
-    public DescriptiveItem(String description, Properties properties) {
-        super(properties);
+    protected final String description;
+
+    public ModItem(String description, Properties pProperties) {
+        super(pProperties);
         this.description = description;
     }
 

@@ -1,13 +1,11 @@
 package net.Energyblade7.inscribedbyancients.item.custom;
 
-import net.Energyblade7.inscribedbyancients.block.custom.InscribedBlocks;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.context.UseOnContext;
@@ -18,9 +16,11 @@ import net.minecraft.world.level.block.state.BlockState;
 import java.util.List;
 
 
-public class ArcheologistsJournal extends Item {
-    public ArcheologistsJournal(Properties properties) {
-        super(properties);
+public class ArcheologistsJournal extends ModItem {
+
+
+    public ArcheologistsJournal(String description, Properties pProperties) {
+        super(description, pProperties);
     }
 
     @Override
@@ -32,7 +32,7 @@ public class ArcheologistsJournal extends Item {
 
 
         } else {
-            pTooltipComponent.add(Component.translatable("tooltip.inscribedbyancients.archeologists_journal.description").withStyle(ChatFormatting.GRAY));
+            pTooltipComponent.add(Component.translatable(description).withStyle(ChatFormatting.GRAY));
 
         }
     }

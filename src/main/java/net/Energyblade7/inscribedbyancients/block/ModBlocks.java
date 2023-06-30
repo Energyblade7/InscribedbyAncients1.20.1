@@ -3,7 +3,7 @@ package net.Energyblade7.inscribedbyancients.block;
 import net.Energyblade7.inscribedbyancients.InscribedbyAncients;
 import net.Energyblade7.inscribedbyancients.block.custom.InscribedBlocks;
 import net.Energyblade7.inscribedbyancients.block.custom.OreBlocks;
-import net.Energyblade7.inscribedbyancients.block.custom.ReclaimedBlocks;
+import net.Energyblade7.inscribedbyancients.block.entity.TestBlock;
 import net.Energyblade7.inscribedbyancients.item.ModItems;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.item.BlockItem;
@@ -40,59 +40,25 @@ public class ModBlocks {
 
     //-----------------------------------------------------------------------------------------------------------------
     //Put the number of Smelting Operations a Fuel Object should get, not burn time!
-    public static final RegistryObject<Block> INSCRIBED_MOSSY_STONE_BRICK = registerBlock("inscribed_mossy_stone_bricks",
-            () -> new InscribedBlocks(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)
-                    .strength(6F)
-                    .requiresCorrectToolForDrops()));
-
-    public static final RegistryObject<Block> INSCRIBED_CRACKED_STONE_BRICK = registerBlock("inscribed_cracked_stone_bricks",
-            () -> new InscribedBlocks(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)
-                    .strength(6F)
-                    .requiresCorrectToolForDrops()));
-
-    public static final RegistryObject<Block> INSCRIBED_STONE_BRICK = registerBlock("inscribed_stone_bricks",
-            () -> new InscribedBlocks(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)
-                    .strength(6F)
-                    .requiresCorrectToolForDrops()));
-
-    public static final RegistryObject<Block> INSCRIBED_DEEPSLATE_BRICK = registerBlock("inscribed_deepslate_bricks",
-            () -> new InscribedBlocks(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE_BRICKS)
-                    .strength(6F)
-                    .requiresCorrectToolForDrops()));
-
-    public static final RegistryObject<Block> INSCRIBED_CRACKED_DEEPSLATE_BRICK = registerBlock("inscribed_cracked_deepslate_bricks",
-            () -> new InscribedBlocks(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE_BRICKS)
-                    .strength(6F)
-                    .requiresCorrectToolForDrops()));
-
-    public static final RegistryObject<Block> INSCRIBED_DEEPSLATE_TILE = registerBlock("inscribed_deepslate_tiles",
-            () -> new InscribedBlocks(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE_BRICKS)
-                    .strength(6F)
-                    .requiresCorrectToolForDrops()));
-
-    public static final RegistryObject<Block> INSCRIBED_CRACKED_DEEPSLATE_TILE = registerBlock("inscribed_cracked_deepslate_tiles",
-            () -> new InscribedBlocks(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE_BRICKS)
-                    .strength(6F)
-                    .requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> RECLAIMED_SAND = registerBlock("reclaimed_sand",
             () -> new BrushableBlock(Blocks.SAND, BlockBehaviour.Properties.copy(Blocks.SUSPICIOUS_SAND)
-                            .strength(1.5F)
-                            .requiresCorrectToolForDrops(),
+                            .strength(0.2F)
+                            .noLootTable(),
                     SoundEvents.BRUSH_SAND,
                     SoundEvents.BRUSH_SAND_COMPLETED));
 
     public static final RegistryObject<Block> RECLAIMED_GRAVEL = registerBlock("reclaimed_gravel",
             () -> new BrushableBlock(Blocks.GRAVEL, BlockBehaviour.Properties.copy(Blocks.SUSPICIOUS_GRAVEL)
-                            .strength(1.5F)
-                            .requiresCorrectToolForDrops(),
+                            .strength(0.2F)
+                            .noLootTable(),
                     SoundEvents.BRUSH_GRAVEL,
                     SoundEvents.BRUSH_GRAVEL_COMPLETED));
 
     public static final RegistryObject<Block> RECLAIMED_DIRT = registerBlock("reclaimed_dirt",
-            () -> new BrushableBlock(Blocks.COARSE_DIRT, BlockBehaviour.Properties.copy(Blocks.SUSPICIOUS_GRAVEL)
-                            .strength(1.5F)
-                            .requiresCorrectToolForDrops(),
+            () -> new BrushableBlock(Blocks.COARSE_DIRT, BlockBehaviour.Properties.copy(Blocks.COARSE_DIRT)
+                            .strength(0.4F)
+                            .noLootTable(),
                     SoundEvents.BRUSH_GRAVEL,
                     SoundEvents.BRUSH_GRAVEL_COMPLETED));
 
@@ -109,7 +75,7 @@ public class ModBlocks {
                     .requiresCorrectToolForDrops())
                     , 200);
 
-
+    //------------------------------------------------------------------------------------------------------------------
     public static final RegistryObject<Block> COMPACTED_RECLAIMATION = registerBlock("compacted_reclaimation",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.SUSPICIOUS_GRAVEL)
                     .sound(ModSoundType.RECLAIMATION)
@@ -146,6 +112,8 @@ public class ModBlocks {
                     .ignitedByLava()
                     .strength(0.2F))
             , 1);
+
+    //------------------------------------------------------------------------------------------------------------------
 
 
     //------------------------------------------------------------------------------------------------------------------

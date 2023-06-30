@@ -1,9 +1,0 @@
-{
-  "variants" : {
-    "facing=north": {"model": "inscribedbyancients:block/inscribed_deepslate_tiles"},
-    "facing=east": {"model": "inscribedbyancients:block/inscribed_deepslate_tiles", "y": 90},
-    "facing=south": {"model": "inscribedbyancients:block/inscribed_deepslate_tiles", "y":  180},
-    "facing=west": {"model": "inscribedbyancients:block/inscribed_deepslate_tiles", "y": 270}
-
-  }
-}
