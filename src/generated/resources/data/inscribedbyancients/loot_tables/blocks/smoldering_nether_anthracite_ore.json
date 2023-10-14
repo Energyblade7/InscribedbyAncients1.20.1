@@ -1,0 +1,51 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "inscribedbyancients:nether_anthracite"
+        }
+      ],
+      "functions": [
+        {
+          "add": false,
+          "conditions": [
+            {
+              "block": "inscribedbyancients:smoldering_nether_anthracite_ore",
+              "condition": "minecraft:block_state_property",
+              "properties": {
+                "smoldering": "false"
+              }
+            }
+          ],
+          "count": {
+            "type": "minecraft:uniform",
+            "max": 2.0,
+            "min": 1.0
+          },
+          "function": "minecraft:set_count"
+        },
+        {
+          "add": false,
+          "conditions": [
+            {
+              "block": "inscribedbyancients:smoldering_nether_anthracite_ore",
+              "condition": "minecraft:block_state_property",
+              "properties": {
+                "smoldering": "true"
+              }
+            }
+          ],
+          "count": 0.0,
+          "function": "minecraft:set_count"
+        }
+      ],
+      "name": "smoldering_nether_anthracite_ore",
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "inscribedbyancients:blocks/smoldering_nether_anthracite_ore"
+}

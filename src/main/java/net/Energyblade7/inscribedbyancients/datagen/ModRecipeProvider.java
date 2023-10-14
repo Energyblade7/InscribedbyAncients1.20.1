@@ -18,9 +18,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
     private static final List<ItemLike> METALLIC_ARTIFACTS = List.of(ModItems.ANTIQUE_APPARATUS.get(), ModItems.ANCIENT_RELIC.get());
     private static final List<ItemLike> ORGANIC_ARTIFACTS = List.of(ModItems.GNARLED_EFFIGY.get());
 
-    private static final List<ItemLike> DRECK_LOG_TYPE = List.of(ModBlocks.DRECK_TALLOW_LOG.get(), ModBlocks.DRECK_TALLOW_WOOD.get(), ModBlocks.STRIPPED_DRECK_TALLOW_LOG.get(), ModBlocks.STRIPPED_DRECK_TALLOW_WOOD.get());
-
-    private static final List<ItemLike> DRECK_TALLOW_PLANKS = List.of(ModBlocks.DRECK_TALLOW_PLANK.get());
     public ModRecipeProvider(PackOutput pOutput) {
         super(pOutput);
     }
@@ -35,6 +32,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
         oreSmelting(pWriter, METALLIC_ARTIFACTS, RecipeCategory.MISC, ModItems.ANCIENT_ALLOY.get(), 1.5F, 200, "metallic_artifacts");
         oreSmelting(pWriter, ORGANIC_ARTIFACTS, RecipeCategory.MISC, Items.CHARCOAL, 1.5F, 200, "organic_artifacts");
+
+        //planksFromLogs(pWriter, ModBlocks.DRECK_TALLOW_PLANK.get(), ModBlockTags.DRECK_TALLOW_LOG_TYPE, 4);
 
         //------------------------------------------------------------------------------------------------------------
 

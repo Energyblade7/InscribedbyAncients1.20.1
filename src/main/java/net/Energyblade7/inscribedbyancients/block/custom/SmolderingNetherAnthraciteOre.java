@@ -32,24 +32,22 @@ public class SmolderingNetherAnthraciteOre extends DropExperienceBlock {
         this.registerDefaultState(this.defaultBlockState().setValue(SMOLDERING, Boolean.valueOf(true)));
     }
 
-
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> pBuilder) {
         pBuilder.add(SMOLDERING);
     }
 
-    // --- Block Behaviors ----------------------------------------------------------------------------------
 
+    // --- Block Behaviors ----------------------------------------------------------------------------------
 
     @Override
     public void stepOn(Level pLevel, BlockPos pPos, BlockState pState, Entity pEntity) {
 
+        if (pEntity.isSteppingCarefully()
+                || EnchantmentHelper.hasFrostWalker((LivingEntity)pEntity)
+                || !pState.getValue(SMOLDERING)) return;
 
-        if (!pEntity.isSteppingCarefully() && pEntity instanceof LivingEntity && !EnchantmentHelper.hasFrostWalker((LivingEntity)pEntity) && pState.getValue(SMOLDERING)) {
-            pEntity.hurt(pLevel.damageSources().hotFloor(), 1.0F);
-        }
-
-        super.stepOn(pLevel, pPos, pState, pEntity);
+        pEntity.hurt(pLevel.damageSources().hotFloor(), 1.0F);
     }
 
     @Override
@@ -75,7 +73,5 @@ public class SmolderingNetherAnthraciteOre extends DropExperienceBlock {
         } else {
             return InteractionResult.PASS;
         }
-
-
     }
 }

@@ -1,18 +1,12 @@
 package net.Energyblade7.inscribedbyancients.particle;
 
-import com.mojang.serialization.Codec;
 import net.Energyblade7.inscribedbyancients.InscribedbyAncients;
-import net.minecraft.core.Registry;
-import net.minecraft.core.particles.ParticleOptions;
 import net.minecraft.core.particles.ParticleType;
 import net.minecraft.core.particles.SimpleParticleType;
-import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
-
-import java.util.function.Function;
 
 public class ModParticleTypes {
 

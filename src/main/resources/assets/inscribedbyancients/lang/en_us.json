@@ -10,12 +10,23 @@
   "tooltip.inscribedbyancients.archeologists_journal.description" : "A Journal that keeps tracks of all that you've learned about an Ancient Civilization.",
   "tooltip.inscribedbyancients.archeologists_journal.shift": "Right-click on an Inscribed Block to write down its phrase, Right-click while holding an Artifact with this book in your Off-Hand to write down its phrase.",
 
+  "menu.translation.title": "Translation",
+  "menu.translation.completed": "Inscription Translated!",
+
+  "item.inscribedbyancients.writable_book.description": "I've found some peculiar writings in an ancient ruin, I think I can learn more about these if I find enough writings to compare them...",
+  "item.inscribedbyancients.writable_book.hint": "I've collected enough writings for the moment, I should study what I've gathered now.",
+
   "item.inscribedbyancients.damaged_tablet" : "Damaged Tablet",
   "tooltip.inscribedbyancients.damaged_tablet.description": "A common enough dig found in ancient ruins, most people salvage them for the components found inside, but maybe there is another way to utilize this artifact...",
 
   "item.inscribedbyancients.ancient_datapad" : "Ancients' Scribelog",
   "tooltip.inscribedbyancients.ancient_datapad.description" : "A refurbished tablet from the ancient civilization. It may hold all the answers pertaining to these people, but only to those that can read their language...",
 
+  "item.inscribedbyancients.architects_scribetool": "Architects' Scribetool",
+  "tooltip.inscribedbyancients.architects_scribetool.description": "An ancient device able to inscribe the surface a block in ether.  Capable of placing false inscription tiles on surfaces. §gSHIFT§r",
+
+  "item.inscribedbyancients.dead_drive" : "Dead Drive",
+  "tooltip.inscribedbyancients.dead_drive.description": "An old device that was found inside a Damaged Tablet, can be salvaged for some basic magic materials... but maybe it can be repaired...",
   "item.inscribedbyancients.experience_drive" : "Experience Drive",
   "tooltip.inscribedbyancients.experience_drive.description": "An esoteric slate that can store a large quantity of magic.  Right-click to store all EXP up to Level 30; Shift Right-click to retrieve all EXP on the Drive.",
 
@@ -49,7 +60,9 @@
   "block.inscribedbyancients.reclaimed_sand": "Reclaimed Sand",
   "block.inscribedbyancients.reclaimed_gravel": "Reclaimed Rubble",
 
-  "block.inscribedbyancients.inscribed_tile": "Inscribed Tile",
+  "block.inscribedbyancients.inscribed_tile": "Inscription Tile",
+  "block.inscribedbyancients.dull_tile": "Dull Inscription Tile",
+  "block.inscribedbyancients.faux_inscription_tile": "Faux Inscription Tile",
   "block.message.inscribed_tile.hint": "I could study this further if I had something to write with...",
 
   "block.inscribedbyancients.nether_anthracite_ore": "Nether Anthracite Ore",
@@ -72,6 +85,8 @@
   "block.inscribedbyancients.dreck_tallow_plank": "Dreck Tallow Planks",
   "block.inscribedbyancients.dreck_tallow_stairs": "Dreck Tallow Stairs",
   "block.inscribedbyancients.dreck_tallow_slab": "Dreck Tallow Slab",
+  "block.inscribedbyancients.dreck_tallow_door": "Dreck Tallow Door",
+  "block.inscribedbyancients.dreck_tallow_trapdoor": "Dreck Tallow Trapdoor",
   "block.inscribedbyancients.dreck_tallow_pressure_plate": "Dreck Tallow Pressure Plate",
   "block.inscribedbyancients.dreck_tallow_button": "Dreck Tallow Button",
   "block.inscribedbyancients.dreck_tallow_fence": "Dreck Tallow Fence",
@@ -89,7 +104,29 @@
   "advancement.inscribedbyancients.the_latest_model.description": "Repaired a Damaged Tablet and obtained the Ancients' Scribelog!",
 
   "advancement.inscribedbyancients.reuse_reduce_recycle.title": "Reuse, Reduce, Recycle!",
-  "advancement.inscribedbyancients.reuse_reduce_recycle.description": "Obtained Ancient Alloy by DESTROYING-- *ahem* 'recycling' a precious Artifact!"
+  "advancement.inscribedbyancients.reuse_reduce_recycle.description": "Obtained Ancient Alloy by DESTROYING-- *ahem* 'recycling' a precious Artifact!",
+
+
+
+  "key.translation.iron": "iron",
+  "key.translation.mines": "mines",
+  "key.translation.mine": "mine",
+  "key.translation.fish": "fish",
+  "key.translation.for": "for",
+  "key.translation.sale": "sale",
+  "key.translation.trading": "trading",
+  "key.translation.forge": "forge",
+  "key.translation.order": "order",
+  "key.translation.water": "water",
+  "key.translation.earth": "earth",
+  "key.translation.swim": "swim",
+  "key.translation.mountain": "mountain",
+  "key.translation.of": "of",
+  "key.translation.people": "people",
+  "key.translation.to": "to",
+  "key.translation.gold": "gold",
+  "key.translation.stone": "stone",
+  "key.translation.go": "go"
 
 
 }

@@ -3,13 +3,10 @@ package net.Energyblade7.inscribedbyancients.datagen.loot;
 import net.Energyblade7.inscribedbyancients.block.ModBlocks;
 import net.Energyblade7.inscribedbyancients.block.custom.SmolderingNetherAnthraciteOre;
 import net.Energyblade7.inscribedbyancients.item.ModItems;
-import net.Energyblade7.inscribedbyancients.item.custom.ModItem;
 import net.minecraft.advancements.critereon.StatePropertiesPredicate;
 import net.minecraft.data.loot.BlockLootSubProvider;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.storage.loot.LootPool;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
@@ -56,6 +53,9 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.DRECK_TALLOW_BUTTON.get());
         this.add(ModBlocks.DRECK_TALLOW_SLAB.get(),
                 block -> createSlabItemTable(ModBlocks.DRECK_TALLOW_SLAB.get()));
+        this.add(ModBlocks.DRECK_TALLOW_DOOR.get(),
+            block -> createDoorTable(ModBlocks.DRECK_TALLOW_DOOR.get()));
+        this.dropSelf(ModBlocks.DRECK_TALLOW_TRAPDOOR.get());
         this.dropSelf(ModBlocks.DRECK_TALLOW_FENCE.get());
         this.dropSelf(ModBlocks.DRECK_TALLOW_FENCE_GATE.get());
 

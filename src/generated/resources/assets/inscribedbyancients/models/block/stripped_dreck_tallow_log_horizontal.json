@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column_horizontal",
+  "textures": {
+    "end": "inscribedbyancients:block/stripped_dreck_tallow_log_top",
+    "side": "inscribedbyancients:block/stripped_dreck_tallow_log"
+  }
+}

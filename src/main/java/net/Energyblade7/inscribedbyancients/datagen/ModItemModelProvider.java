@@ -23,6 +23,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.ANCIENT_DATAPAD);
         simpleItem(ModItems.ARCHEOLOGISTS_JOURNAL);
         simpleItem(ModItems.DAMAGED_TABLET);
+        simpleItem(ModItems.ARCHITECTS_SCRIBETOOL);
 
         simpleItem(ModItems.ANCIENT_ALLOY);
         simpleItem(ModItems.ETHER_BANK);
@@ -40,6 +41,11 @@ public class ModItemModelProvider extends ItemModelProvider {
         buttonItem(ModBlocks.DRECK_TALLOW_BUTTON, ModBlocks.DRECK_TALLOW_PLANK);
         fenceItem(ModBlocks.DRECK_TALLOW_FENCE, ModBlocks.DRECK_TALLOW_PLANK);
 
+        simpleBlockItem(ModBlocks.DRECK_TALLOW_DOOR);
+        simpleBlockItem(ModBlocks.DULL_TILE);
+        simpleBlockItem(ModBlocks.INSCRIBED_TILE, "inscription_tile");
+        simpleBlockItem(ModBlocks.FAUX_INSCRIPTION_TILE, "inscription_tile");
+
     }
 
 
@@ -56,6 +62,18 @@ public class ModItemModelProvider extends ItemModelProvider {
     public void wallItem(RegistryObject<Block> block, RegistryObject<Block> baseBlock) {
         this.withExistingParent(ForgeRegistries.BLOCKS.getKey(block.get()).getPath(), mcLoc("block/wall_inventory"))
                 .texture("wall",  new ResourceLocation(InscribedbyAncients.MOD_ID, "block/" + ForgeRegistries.BLOCKS.getKey(baseBlock.get()).getPath()));
+    }
+
+    private ItemModelBuilder simpleBlockItem(RegistryObject<Block> item) {
+        return withExistingParent(item.getId().getPath(),
+                new ResourceLocation("item/generated")).texture("layer0",
+                new ResourceLocation(InscribedbyAncients.MOD_ID,"item/" + item.getId().getPath()));
+    }
+
+    private ItemModelBuilder simpleBlockItem(RegistryObject<Block> item, String path) {
+        return withExistingParent(item.getId().getPath(),
+                new ResourceLocation("item/generated")).texture("layer0",
+                new ResourceLocation(InscribedbyAncients.MOD_ID,"item/" + path));
     }
 
     private ItemModelBuilder simpleItem(RegistryObject<Item> item) {

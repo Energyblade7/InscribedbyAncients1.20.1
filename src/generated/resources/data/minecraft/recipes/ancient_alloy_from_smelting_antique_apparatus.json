@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 1.5,
+  "group": "metallic_artifacts",
+  "ingredient": {
+    "item": "inscribedbyancients:antique_apparatus"
+  },
+  "result": "inscribedbyancients:ancient_alloy"
+}

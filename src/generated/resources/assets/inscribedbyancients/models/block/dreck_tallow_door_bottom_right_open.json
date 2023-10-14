@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/door_bottom_right_open",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "bottom": "inscribedbyancients:block/dreck_tallow_door_bottom",
+    "top": "inscribedbyancients:block/dreck_tallow_door_top"
+  }
+}

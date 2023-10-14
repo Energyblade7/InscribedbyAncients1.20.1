@@ -2,7 +2,9 @@ package net.Energyblade7.inscribedbyancients.block;
 
 import net.Energyblade7.inscribedbyancients.InscribedbyAncients;
 import net.Energyblade7.inscribedbyancients.block.custom.*;
+import net.Energyblade7.inscribedbyancients.block.library.WritingTile;
 import net.Energyblade7.inscribedbyancients.item.ModItems;
+import net.Energyblade7.inscribedbyancients.util.ModSoundType;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
@@ -144,6 +146,16 @@ public class ModBlocks {
     public static final RegistryObject<Block> DRECK_TALLOW_SLAB = registerBlock("dreck_tallow_slab",
             () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SLAB))
             , 1.5f);
+    public static final RegistryObject<Block> DRECK_TALLOW_DOOR = registerBlock("dreck_tallow_door",
+            () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_DOOR)
+                    .noOcclusion()
+                    , BlockSetType.OAK)
+                    , 2F);
+    public static final RegistryObject<Block> DRECK_TALLOW_TRAPDOOR = registerBlock("dreck_tallow_trapdoor",
+            () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_TRAPDOOR)
+                    .noOcclusion()
+                    , BlockSetType.OAK)
+                    , 1.5f);
     public static final RegistryObject<Block> DRECK_TALLOW_PRESSURE_PLATE = registerBlock("dreck_tallow_pressure_plate",
             () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, BlockBehaviour.Properties.copy(Blocks.OAK_PRESSURE_PLATE)
                     , BlockSetType.OAK)
@@ -161,14 +173,22 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> INSCRIBED_TILE = registerBlock("inscribed_tile",
             () -> new InscriptionTile(BlockBehaviour.Properties.of()
-                    .mapColor(MapColor.COLOR_BLUE)
+                    .mapColor(MapColor.NONE)
                     .sound(ModSoundType.INSCRIPTION_TILE)
                     .strength(50.0F,0.2F)
+                    .lightLevel(value -> 3)
                     .noOcclusion()
                     .noCollission()
                     .noLootTable()
                     .pushReaction(PushReaction.IGNORE)));
 
+    public static final RegistryObject<Block> DULL_TILE = registerBlock("dull_tile",
+            () -> new WritingTile(BlockBehaviour.Properties.copy(ModBlocks.INSCRIBED_TILE.get())
+                    .noLootTable()));
+
+    public static final RegistryObject<Block> FAUX_INSCRIPTION_TILE = registerBlock("faux_inscription_tile",
+            () -> new FauxInscriptionTile(BlockBehaviour.Properties.copy(ModBlocks.INSCRIBED_TILE.get())
+                    .noLootTable()));
     //------------------------------------------------------------------------------------------------------------------
    //Put the number of Smelting Operations a Fuel Object should get, not burn time!
     private static <T extends Block> RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block) {

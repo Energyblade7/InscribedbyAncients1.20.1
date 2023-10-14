@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_antique_apparatus": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "inscribedbyancients:antique_apparatus"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:ancient_alloy_from_smelting_antique_apparatus"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_antique_apparatus",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:ancient_alloy_from_smelting_antique_apparatus"
+    ]
+  },
+  "sends_telemetry_event": false
+}

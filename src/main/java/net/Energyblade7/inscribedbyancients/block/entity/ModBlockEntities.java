@@ -10,7 +10,7 @@ import net.minecraftforge.registries.RegistryObject;
 
 public class ModBlockEntities {
     public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES = DeferredRegister.create(ForgeRegistries.BLOCK_ENTITY_TYPES, InscribedbyAncients.MOD_ID);
-    //------------------------------------------------------------------------------------------------------------------
+    //--- Block Entity Deferred Registry -------------------------------------------------------------------------------
 
 
     //------------------------------------------------------------------------------------------------------------------

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/fence_side",
+  "textures": {
+    "texture": "inscribedbyancients:block/dreck_tallow_plank"
+  }
+}

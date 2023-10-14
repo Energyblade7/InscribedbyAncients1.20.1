@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 1.5,
+  "group": "organic_artifacts",
+  "ingredient": {
+    "item": "inscribedbyancients:gnarled_effigy"
+  },
+  "result": "minecraft:charcoal"
+}

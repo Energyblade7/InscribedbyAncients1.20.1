@@ -3,9 +3,13 @@ package net.Energyblade7.inscribedbyancients;
 import com.mojang.logging.LogUtils;
 import net.Energyblade7.inscribedbyancients.block.ModBlocks;
 import net.Energyblade7.inscribedbyancients.block.entity.ModBlockEntities;
-import net.Energyblade7.inscribedbyancients.item.ModCreativeModeTabs;
 import net.Energyblade7.inscribedbyancients.item.ModItems;
+import net.Energyblade7.inscribedbyancients.item.OverriddenItems;
 import net.Energyblade7.inscribedbyancients.particle.ModParticleTypes;
+import net.Energyblade7.inscribedbyancients.client.IBAMenuTypes;
+import net.Energyblade7.inscribedbyancients.util.ModCreativeModeTabs;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -35,6 +39,9 @@ public class InscribedbyAncients
         ModBlocks.register(modEventBus);
         ModBlockEntities.register(modEventBus);
         ModParticleTypes.register(modEventBus);
+        IBAMenuTypes.register(modEventBus);
+
+        OverriddenItems.register(modEventBus);
 
         //------------------------------------------------------------------------------------
 
@@ -44,18 +51,27 @@ public class InscribedbyAncients
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
+        modEventBus.addListener(this::clientSetup);
 
         //------------------------------------------------------------------------------------
 
 
     }
 
+    private void clientSetup(final FMLClientSetupEvent event){
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.DULL_TILE.get(), RenderType.translucent());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.INSCRIBED_TILE.get(), RenderType.translucent());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.FAUX_INSCRIPTION_TILE.get(), RenderType.translucent());
+    }
+
 
     private void addCreative(BuildCreativeModeTabContentsEvent event)
     {
         if(event.getTab() == ModCreativeModeTabs.ANCIENTS_TAB.get()) {
+            event.accept(OverriddenItems.WRITABLE_BOOK);
             event.accept(ModItems.ARCHEOLOGISTS_JOURNAL);
             event.accept(ModItems.ANCIENT_DATAPAD);
+            event.accept(ModItems.ARCHITECTS_SCRIBETOOL);
 
 
             event.accept(ModItems.NETHER_ANTHRACITE);
@@ -93,6 +109,8 @@ public class InscribedbyAncients
             event.accept(ModBlocks.DRECK_TALLOW_PLANK);
             event.accept(ModBlocks.DRECK_TALLOW_STAIRS);
             event.accept(ModBlocks.DRECK_TALLOW_SLAB);
+            event.accept(ModBlocks.DRECK_TALLOW_DOOR);
+            event.accept(ModBlocks.DRECK_TALLOW_TRAPDOOR);
             event.accept(ModBlocks.DRECK_TALLOW_PRESSURE_PLATE);
             event.accept(ModBlocks.DRECK_TALLOW_BUTTON);
             event.accept(ModBlocks.DRECK_TALLOW_FENCE);
@@ -124,6 +142,8 @@ public class InscribedbyAncients
             event.accept(ModBlocks.DRECK_TALLOW_PLANK);
             event.accept(ModBlocks.DRECK_TALLOW_STAIRS);
             event.accept(ModBlocks.DRECK_TALLOW_SLAB);
+            event.accept(ModBlocks.DRECK_TALLOW_DOOR);
+            event.accept(ModBlocks.DRECK_TALLOW_TRAPDOOR);
             event.accept(ModBlocks.DRECK_TALLOW_FENCE);
             event.accept(ModBlocks.DRECK_TALLOW_FENCE_GATE);
 
@@ -150,6 +170,7 @@ public class InscribedbyAncients
         }
 
         if(event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES){
+            event.accept(ModItems.ARCHITECTS_SCRIBETOOL);
             event.accept(ModItems.EXPERIENCE_DRIVE);
             event.accept(ModItems.WEEPING_BLACKBOX);
         }

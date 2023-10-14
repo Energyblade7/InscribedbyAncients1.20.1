@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/button_pressed",
+  "textures": {
+    "texture": "inscribedbyancients:block/dreck_tallow_plank"
+  }
+}

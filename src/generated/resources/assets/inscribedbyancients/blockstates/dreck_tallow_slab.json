@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "inscribedbyancients:block/dreck_tallow_slab"
+    },
+    "type=double": {
+      "model": "inscribedbyancients:block/dreck_tallow_plank"
+    },
+    "type=top": {
+      "model": "inscribedbyancients:block/dreck_tallow_slab_top"
+    }
+  }
+}

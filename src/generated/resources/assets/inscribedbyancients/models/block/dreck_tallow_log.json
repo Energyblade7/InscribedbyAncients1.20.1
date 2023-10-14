@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "inscribedbyancients:block/dreck_tallow_log_top",
+    "side": "inscribedbyancients:block/dreck_tallow_log"
+  }
+}

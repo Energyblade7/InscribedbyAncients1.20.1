@@ -2,7 +2,7 @@ package net.Energyblade7.inscribedbyancients.datagen;
 
 import net.Energyblade7.inscribedbyancients.InscribedbyAncients;
 import net.Energyblade7.inscribedbyancients.block.ModBlocks;
-import net.Energyblade7.inscribedbyancients.tags.ModBlockTags;
+import net.Energyblade7.inscribedbyancients.util.ModBlockTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;
@@ -70,9 +70,19 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
 
         // --- Modded Block Tags ---------------------------------------------------------------------------------------
 
-        this.tag(ModBlockTags.DRECK_MOSS)
-                .add(ModBlocks.DRECK_MOSS.get())
-                .add(ModBlocks.MOSSY_RECLAIMATION.get());
+        this.tag(ModBlockTags.DRECK_TALLOW_LOG_TYPE)
+                .add(ModBlocks.DRECK_TALLOW_LOG.get())
+                .add(ModBlocks.STRIPPED_DRECK_TALLOW_LOG.get())
+                .add(ModBlocks.DRECK_TALLOW_WOOD.get())
+                .add(ModBlocks.STRIPPED_DRECK_TALLOW_WOOD.get());
+
+        this.tag(ModBlockTags.INSCRIPTION_TILE_LIKE)
+                .add(ModBlocks.INSCRIBED_TILE.get())
+                .add(ModBlocks.FAUX_INSCRIPTION_TILE.get())
+                .add(ModBlocks.DULL_TILE.get());
+
+        this.tag(ModBlockTags.TRUE_INSCRIPTION_TILE)
+                .add(ModBlocks.INSCRIBED_TILE.get());
 
         // -------------------------------------------------------------------------------------------------------------
 

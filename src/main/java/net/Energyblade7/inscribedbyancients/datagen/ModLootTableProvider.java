@@ -1,6 +1,7 @@
 package net.Energyblade7.inscribedbyancients.datagen;
 
 import net.Energyblade7.inscribedbyancients.datagen.loot.ModBlockLootTables;
+import net.Energyblade7.inscribedbyancients.datagen.loot.ModLootTables;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.loot.LootTableProvider;
 import net.minecraft.world.level.storage.loot.parameters.LootContextParamSets;
@@ -13,6 +14,7 @@ public class ModLootTableProvider {
     // Add new loot set to datagen/loot
     static LootTableProvider create(PackOutput packOutput) {
         return new LootTableProvider(packOutput, Set.of()
-                , List.of(new LootTableProvider.SubProviderEntry(ModBlockLootTables::new, LootContextParamSets.BLOCK)));
+                , List.of(new LootTableProvider.SubProviderEntry(ModBlockLootTables::new, LootContextParamSets.BLOCK))
+                );
     }
 }

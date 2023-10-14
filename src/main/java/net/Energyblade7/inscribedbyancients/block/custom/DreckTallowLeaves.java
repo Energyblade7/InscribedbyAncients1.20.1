@@ -3,7 +3,6 @@ package net.Energyblade7.inscribedbyancients.block.custom;
 import net.Energyblade7.inscribedbyancients.particle.ModParticleTypes;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-
 import net.minecraft.util.ParticleUtils;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.Level;
@@ -17,14 +16,16 @@ public class DreckTallowLeaves extends LeavesBlock {
 
     @Override
     public void animateTick(BlockState pState, Level pLevel, BlockPos pPos, RandomSource pRandom) {
+        BlockPos blockpos = pPos.below();
+        BlockState blockstate = pLevel.getBlockState(blockpos);
+
         super.animateTick(pState, pLevel, pPos, pRandom);
-        if (pRandom.nextInt(10) == 0) {
-            BlockPos blockpos = pPos.below();
-            BlockState blockstate = pLevel.getBlockState(blockpos);
-            if (!isFaceFull(blockstate.getCollisionShape(pLevel, blockpos), Direction.UP)) {
-                ParticleUtils.spawnParticleBelow(pLevel, pPos, pRandom, ModParticleTypes.DRECK_TALLOW_LEAVES.get());
-            }
-        }
+
+        if (pRandom.nextInt(10) != 0) return;
+
+        if (isFaceFull(blockstate.getCollisionShape(pLevel, blockpos), Direction.UP)) return;
+
+        ParticleUtils.spawnParticleBelow(pLevel, pPos, pRandom, ModParticleTypes.DRECK_TALLOW_LEAVES.get());
     }
 }
 

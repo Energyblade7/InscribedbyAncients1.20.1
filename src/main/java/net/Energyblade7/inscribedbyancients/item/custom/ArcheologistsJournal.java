@@ -1,68 +1,85 @@
 package net.Energyblade7.inscribedbyancients.item.custom;
 
 import net.Energyblade7.inscribedbyancients.block.ModBlocks;
-import net.minecraft.ChatFormatting;
-import net.minecraft.client.gui.screens.Screen;
+import net.Energyblade7.inscribedbyancients.client.ClientHooks;
+import net.Energyblade7.inscribedbyancients.item.library.IBAItem;
+import net.Energyblade7.inscribedbyancients.util.ModBlockTags;
 import net.minecraft.core.BlockPos;
-import net.minecraft.network.chat.Component;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.UseAnim;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.fml.DistExecutor;
+import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-import java.util.List;
+import java.util.Objects;
 
 
-public class ArcheologistsJournal extends ModItem {
+public class ArcheologistsJournal extends IBAItem {
 
+    protected static BlockPos savedBlockPos;
+    protected static BlockState savedBlockState;
 
     public ArcheologistsJournal(String description, @Nullable String shiftDescription, Properties pProperties) {
         super(description, shiftDescription, pProperties);
     }
 
+    // --- Item Stack Properties ---------------------------------------------------------------------------------------
 
+    @NotNull
     @Override
-    public ItemStack finishUsingItem(ItemStack pStack, Level pLevel, LivingEntity pLivingEntity) {
-        return super.finishUsingItem(pStack, pLevel, pLivingEntity);
-    }
-
-    @Override
-    public InteractionResult useOn(UseOnContext useOnContext) {
-        if (!useOnContext.getLevel().isClientSide) {
-            BlockPos positionClicked = useOnContext.getClickedPos();
-            Player player = useOnContext.getPlayer();
-            boolean isInscriptionTile;
-
-            BlockState block = useOnContext.getLevel().getBlockState(positionClicked);
-
-            if (isInscribedBlock(block)) {
-                return InteractionResult.SUCCESS;
-            }
-        }
-
-        return InteractionResult.PASS;
-    }
-
-    @Override
-    public int getUseDuration(ItemStack pStack) {
-        return 2000;
-    }
-
-    @Override
-    public UseAnim getUseAnimation(ItemStack pStack) {
+    public UseAnim getUseAnimation(@NotNull ItemStack pStack) {
         return UseAnim.BOW;
     }
 
+    @Override
+    public int getUseDuration(@NotNull ItemStack pStack) { return 30; }
 
-// MISC Functions -------------------------------------------------------------------------------------------------
-    private boolean isInscribedBlock(BlockState block) {
-        return block.is(ModBlocks.INSCRIBED_TILE.get());
+    @Override
+    public InteractionResult onItemUseFirst(ItemStack pStack, UseOnContext useOnContext) {
+
+        savedBlockPos = useOnContext.getClickedPos();
+        savedBlockState = useOnContext.getLevel().getBlockState(savedBlockPos);
+
+        if(!useOnContext.getLevel().getBlockState(useOnContext.getClickedPos()).is(ModBlockTags.TRUE_INSCRIPTION_TILE))
+            {return InteractionResult.PASS;}
+
+
+        Objects.requireNonNull(useOnContext.getPlayer()).startUsingItem(useOnContext.getHand());
+        return InteractionResult.SUCCESS;
     }
+
+    @Override
+    public void onUseTick(@NotNull Level pLevel, @NotNull LivingEntity pLivingEntity, @NotNull ItemStack pStack, int pRemainingUseDuration) {
+        if(pRemainingUseDuration != 1) return;
+
+        finishUsingItem(pStack, pLevel, pLivingEntity);
+    }
+
+    @NotNull
+    @Override
+    public ItemStack finishUsingItem(@NotNull ItemStack pStack, @NotNull Level pLevel, @NotNull LivingEntity pLivingEntity) {
+
+        if(!(pLivingEntity instanceof Player player)) return pStack;
+
+        player.getCooldowns().addCooldown(pStack.getItem(), getUseDuration(pStack) + 10);
+        pLevel.playSound(player, player, SoundEvents.ENCHANTMENT_TABLE_USE, SoundSource.PLAYERS, 1F, 0.7F);
+        pLevel.setBlockAndUpdate(savedBlockPos, ModBlocks.DULL_TILE.get().withPropertiesOf(savedBlockState));
+
+        if(pLevel.isClientSide) DistExecutor.unsafeRunWhenOn(Dist.CLIENT, () -> ClientHooks::openTranslationScreen);
+
+        return pStack;
+    }
+
+    // -----------------------------------------------------------------------------------------------------------------
+
 
 }

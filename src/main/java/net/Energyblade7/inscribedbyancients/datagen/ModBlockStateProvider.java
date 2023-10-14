@@ -2,11 +2,14 @@ package net.Energyblade7.inscribedbyancients.datagen;
 
 import net.Energyblade7.inscribedbyancients.InscribedbyAncients;
 import net.Energyblade7.inscribedbyancients.block.ModBlocks;
+import net.Energyblade7.inscribedbyancients.block.custom.InscriptionTile;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.*;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
+import net.minecraftforge.client.model.generators.ConfiguredModel;
 import net.minecraftforge.client.model.generators.ModelFile;
+import net.minecraftforge.client.model.generators.MultiPartBlockStateBuilder;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -52,8 +55,14 @@ public class ModBlockStateProvider extends BlockStateProvider {
         slabBlock(((SlabBlock) ModBlocks.DRECK_TALLOW_SLAB.get()), blockTexture(ModBlocks.DRECK_TALLOW_PLANK.get()), blockTexture(ModBlocks.DRECK_TALLOW_PLANK.get()));
         blockItem(ModBlocks.DRECK_TALLOW_SLAB);
 
+        doorBlockWithRenderType((DoorBlock) ModBlocks.DRECK_TALLOW_DOOR.get(), modLoc("block/dreck_tallow_door_bottom"), modLoc("block/dreck_tallow_door_top"), "cutout");
+        //Handled in ModItemModelProvider
+
+        trapdoorBlockWithRenderType((TrapDoorBlock) ModBlocks.DRECK_TALLOW_TRAPDOOR.get(), modLoc("block/dreck_tallow_trapdoor"), true, "cutout");
+        blockItem(ModBlocks.DRECK_TALLOW_TRAPDOOR, "_bottom");
+
         buttonBlock((ButtonBlock) ModBlocks.DRECK_TALLOW_BUTTON.get(), blockTexture(ModBlocks.DRECK_TALLOW_PLANK.get()));
-        //Buttom Item Models are generated in ModItemModelProvider
+        //Handled in ModItemModelProvider
 
         pressurePlateBlock((PressurePlateBlock) ModBlocks.DRECK_TALLOW_PRESSURE_PLATE.get(), blockTexture(ModBlocks.DRECK_TALLOW_PLANK.get()));
         blockItem(ModBlocks.DRECK_TALLOW_PRESSURE_PLATE);
@@ -67,21 +76,25 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     // --- Helper Functions -------------------------------------------------------------------------------------------
 
-   /* private void inscribedTile() {
-        getVariantBuilder(ModBlocks.INSCRIBED_TILE.get()).forAllStates(state -> {
-            if(state.getValue(InscriptionTile.RECORDED)) {
-                return new ConfiguredModel[]{new ConfiguredModel(models().singleTexture("inscribed_tile_on",
-                        new ResourceLocation(InscribedbyAncients.MOD_ID, "block/"), new ResourceLocation("inscribed_tile")))};
-            } else {
-                return new ConfiguredModel[]{new ConfiguredModel(models().singleTexture("inscribed_tile_off",
-                        new ResourceLocation(InscribedbyAncients.MOD_ID, "block/dreck_tallow_plank"), new ResourceLocation("")))};
-            }
-
-
+    public void inscriptionTile(FenceGateBlock block, ModelFile modelFile) {
+        getVariantBuilder(block).forAllStates(state -> {
+            ModelFile model = modelFile;
+            return ConfiguredModel.builder()
+                    .modelFile(model)
+                    .rotationY((int) state.getValue(FenceGateBlock.FACING).toYRot())
+                    .uvLock(true)
+                    .build();
         });
-        simpleBlockItem(ModBlocks.INSCRIBED_TILE.get(), models().singleTexture("inscribed_tile_on",
-                new ResourceLocation(InscribedbyAncients.MOD_ID, "block/"), new ResourceLocation("inscribed_tile")));
-    }*/
+    }
+
+    /*
+                if (state.getValue(FenceGateBlock.OPEN)) {
+                model = model == gateWall ? gateWallOpen : gateOpen;
+            }
+     */
+    private void blockItem(RegistryObject<Block> blockRegistryObject, String appendix) {
+        simpleBlockItem(blockRegistryObject.get(), new ModelFile.UncheckedModelFile("inscribedbyancients:block/" + ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath() + appendix));
+    }
 
     private void blockItem(RegistryObject<Block> blockRegistryObject) {
         simpleBlockItem(blockRegistryObject.get(), new ModelFile.UncheckedModelFile("inscribedbyancients:block/" + ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath()));
