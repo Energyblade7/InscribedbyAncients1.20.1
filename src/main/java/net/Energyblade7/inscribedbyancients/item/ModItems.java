@@ -18,27 +18,29 @@ public class ModItems {
 //---------------------------------------------------------------------------------------------------------------------
 //Put the number of Smelting Operations a Fuel Object should get, not burn time!
     public static final RegistryObject<Item> ARCHEOLOGISTS_JOURNAL = ITEMS.register("archeologists_journal",
-            () -> new ArcheologistsJournal("tooltip.inscribedbyancients.archeologists_journal.description", new Item.Properties()
+            () -> new ArcheologistsJournal("tooltip.inscribedbyancients.archeologists_journal.description",
+                    "tooltip.inscribedbyancients.archeologists_journal.shift", new Item.Properties()
                     .stacksTo(1)));
 
     public static final RegistryObject<Item> ANCIENT_DATAPAD = ITEMS.register("ancient_datapad",
-            () -> new AncientDatapad("tooltip.inscribedbyancients.ancient_datapad.description", new Item.Properties()
+            () -> new AncientDatapad("tooltip.inscribedbyancients.ancient_datapad.description",
+                    null, new Item.Properties()
                     .stacksTo(1)));
 
     public static final RegistryObject<Item> DAMAGED_TABLET = ITEMS.register("damaged_tablet",
-            () -> new DamagedTablet("tooltip.inscribedbyancients.damaged_tablet.description", new Item.Properties()
+            () -> new DamagedTablet("tooltip.inscribedbyancients.damaged_tablet.description", null, new Item.Properties()
                     .stacksTo(1)));
 
     public static final RegistryObject<Item> EXPERIENCE_DRIVE = ITEMS.register("experience_drive",
-            () -> new ExperienceDrive("tooltip.inscribedbyancients.experience_drive.description", new Item.Properties()
+            () -> new ExperienceDrive("tooltip.inscribedbyancients.experience_drive.description", null,new Item.Properties()
                     .stacksTo(1)));
 
     public static final RegistryObject<Item> WEEPING_BLACKBOX = ITEMS.register("weeping_blackbox",
-            () -> new WeepingBlackbox("tooltip.inscribedbyancients.weeping_blackbox.description", new Item.Properties()
+            () -> new WeepingBlackbox("tooltip.inscribedbyancients.weeping_blackbox.description", null,new Item.Properties()
                     .stacksTo(16)));
 
     public static final RegistryObject<Item> NETHER_ANTHRACITE = ITEMS.register("nether_anthracite",
-            () -> new FuelItem("tooltip.inscribedbyancients.nether_anthracite.description", new Item.Properties()
+            () -> new FuelItem("tooltip.inscribedbyancients.nether_anthracite.description", null, new Item.Properties()
                     , 10));
 
     public static final RegistryObject<Item> ANCIENT_RELIC = ITEMS.register("rusted_artifact",
@@ -54,10 +56,17 @@ public class ModItems {
                     .stacksTo(16)));
 
     public static final RegistryObject<Item> ANCIENT_ALLOY = ITEMS.register("ancient_alloy",
-            () -> new ModItem("tooltip.inscribedbyancients.ancient_alloy.description", new Item.Properties()));
+            () -> new ModItem("tooltip.inscribedbyancients.ancient_alloy.description",
+                    null ,new Item.Properties()));
 
     public static final RegistryObject<Item> ETHER_BANK = ITEMS.register("ether_bank",
-            () -> new ModItem("tooltip.inscribedbyancients.ether_bank.description", new Item.Properties()));
+            () -> new ModItem("tooltip.inscribedbyancients.ether_bank.description",
+                    null, new Item.Properties()));
+
+    public static final RegistryObject<Item> DRECK_TALLOW_NUT = ITEMS.register("dreck_tallow_nut",
+            () -> new ModItem("tooltip.inscribedbyancients.dreck_tallow_nut.description",
+                    null, new Item.Properties()
+                    .food(ModFoods.TALLOW_NUT)));
 
 
     //---------------------------------------------------------------------------------------------------------------------

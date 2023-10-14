@@ -8,10 +8,11 @@ import org.jetbrains.annotations.Nullable;
 public class FuelItem extends ModItem {
     private int smeltOperations;
 
-    public FuelItem(String description, Properties pProperties, int smeltOperations) {
-        super(description, pProperties);
-        this.smeltOperations = smeltOperations * 200;
+    public FuelItem(String description, @Nullable String shiftDescription, Properties pProperties, float smeltOperations) {
+        super(description, shiftDescription, pProperties);
+        this.smeltOperations = (int) smeltOperations * 200;
     }
+
 
     @Override
     public int getBurnTime(ItemStack itemStack, @Nullable RecipeType<?> recipeType) {

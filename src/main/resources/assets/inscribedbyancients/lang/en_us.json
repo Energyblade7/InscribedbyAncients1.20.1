@@ -49,13 +49,8 @@
   "block.inscribedbyancients.reclaimed_sand": "Reclaimed Sand",
   "block.inscribedbyancients.reclaimed_gravel": "Reclaimed Rubble",
 
-  "block.inscribedbyancients.inscribed_mossy_stone_bricks": "Inscribed Mossy Stone Bricks",
-  "block.inscribedbyancients.inscribed_cracked_stone_bricks": "Inscribed Cracked Stone Bricks",
-  "block.inscribedbyancients.inscribed_stone_bricks": "Inscribed Stone Bricks",
-  "block.inscribedbyancients.inscribed_deepslate_bricks": "Inscribed Deepslate Bricks",
-  "block.inscribedbyancients.inscribed_cracked_deepslate_bricks": "Inscribed Cracked Deepslate Bricks",
-  "block.inscribedbyancients.inscribed_deepslate_tiles": "Inscribed Deepslate Tiles",
-  "block.inscribedbyancients.inscribed_cracked_deepslate_tiles": "Inscribed Cracked Deepslate Tiles",
+  "block.inscribedbyancients.inscribed_tile": "Inscribed Tile",
+  "block.message.inscribed_tile.hint": "I could study this further if I had something to write with...",
 
   "block.inscribedbyancients.nether_anthracite_ore": "Nether Anthracite Ore",
   "block.inscribedbyancients.nether_anthracite_block": "Nether Anthracite Block",
@@ -65,10 +60,22 @@
   "block.inscribedbyancients.mossy_reclaimation": "Mossy Reclaimation",
   "block.inscribedbyancients.dreck_moss": "Dreck Moss",
 
-  "block.inscribedbyancients.dreck_ginkgo_log": "Dreck Ginkgo Log",
-  "block.inscribedbyancients.stripped_dreck_ginkgo_log": "Stripped Dreck Ginkgo Log",
-  "block.inscribedbyancients.dreck_ginkgo_leaves": "Dreck Ginkgo Leaves",
-  "block.inscribedbyancients.dreck_ginkgo_sapling": "Dreck Ginkgo Sapling",
+  "block.inscribedbyancients.dreck_tallow_log": "Dreck Tallow Log",
+  "block.inscribedbyancients.dreck_tallow_wood": "Dreck_Tallow_Wood",
+  "block.inscribedbyancients.stripped_dreck_tallow_log": "Stripped Dreck Tallow Log",
+  "block.inscribedbyancients.stripped_dreck_tallow_wood": "Stripped Dreck Tallow Wood",
+  "block.inscribedbyancients.dreck_tallow_leaves": "Dreck Tallow Leaves",
+  "item.inscribedbyancients.dreck_tallow_nut": "Dreck Tallow Nut",
+  "tooltip.inscribedbyancients.dreck_tallow_nut.description": "A highly toxic nut from the Dreck Tallow tree, has a myriad of purposes.",
+  "block.inscribedbyancients.dreck_tallow_sapling": "Dreck Tallow Sapling",
+
+  "block.inscribedbyancients.dreck_tallow_plank": "Dreck Tallow Planks",
+  "block.inscribedbyancients.dreck_tallow_stairs": "Dreck Tallow Stairs",
+  "block.inscribedbyancients.dreck_tallow_slab": "Dreck Tallow Slab",
+  "block.inscribedbyancients.dreck_tallow_pressure_plate": "Dreck Tallow Pressure Plate",
+  "block.inscribedbyancients.dreck_tallow_button": "Dreck Tallow Button",
+  "block.inscribedbyancients.dreck_tallow_fence": "Dreck Tallow Fence",
+  "block.inscribedbyancients.dreck_tallow_fence_gate": "Dreck Tallow Fence Gate",
 
 
 
@@ -82,8 +89,7 @@
   "advancement.inscribedbyancients.the_latest_model.description": "Repaired a Damaged Tablet and obtained the Ancients' Scribelog!",
 
   "advancement.inscribedbyancients.reuse_reduce_recycle.title": "Reuse, Reduce, Recycle!",
-  "advancement.inscribedbyancients.reuse_reduce_recycle.description": "Obtained Ancient Alloy by DESTROYING-- *ahem* 'recycling' a precious Artifact!",
+  "advancement.inscribedbyancients.reuse_reduce_recycle.description": "Obtained Ancient Alloy by DESTROYING-- *ahem* 'recycling' a precious Artifact!"
 
-  "container.crafting.testblock": "Test Block"
 
 }

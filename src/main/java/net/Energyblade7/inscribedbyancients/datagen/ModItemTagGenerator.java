@@ -1,10 +1,12 @@
 package net.Energyblade7.inscribedbyancients.datagen;
 
 import net.Energyblade7.inscribedbyancients.InscribedbyAncients;
+import net.Energyblade7.inscribedbyancients.item.ModItems;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
 import net.minecraft.world.level.block.Block;
+import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import org.jetbrains.annotations.Nullable;
 
@@ -19,6 +21,12 @@ public class ModItemTagGenerator extends ItemTagsProvider {
     @Override
     protected void addTags(HolderLookup.Provider pProvider) {
         //Add Item Tags here
+        this.tag(Tags.Items.SEEDS)
+                .add(ModItems.DRECK_TALLOW_NUT.get());
+
+
+        this.tag(Tags.Items.INGOTS)
+                .add(ModItems.ANCIENT_ALLOY.get());
     }
 
     @Override

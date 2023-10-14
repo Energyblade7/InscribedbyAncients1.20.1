@@ -1,15 +1,12 @@
 package net.Energyblade7.inscribedbyancients.datagen;
 
-import net.Energyblade7.inscribedbyancients.InscribedbyAncients;
 import net.Energyblade7.inscribedbyancients.block.ModBlocks;
 import net.Energyblade7.inscribedbyancients.item.ModItems;
-import net.minecraft.advancements.critereon.ItemPredicate;
 import net.minecraft.data.PackOutput;
-import net.minecraft.data.recipes.*;
+import net.minecraft.data.recipes.FinishedRecipe;
+import net.minecraft.data.recipes.RecipeCategory;
+import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.world.item.Items;
-import net.minecraft.world.item.crafting.AbstractCookingRecipe;
-import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.level.ItemLike;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 
@@ -20,6 +17,10 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
     private static final List<ItemLike> NETHER_ANTHRACITE_ORE = List.of(ModBlocks.NETHER_ANTHRACITE_ORE.get());
     private static final List<ItemLike> METALLIC_ARTIFACTS = List.of(ModItems.ANTIQUE_APPARATUS.get(), ModItems.ANCIENT_RELIC.get());
     private static final List<ItemLike> ORGANIC_ARTIFACTS = List.of(ModItems.GNARLED_EFFIGY.get());
+
+    private static final List<ItemLike> DRECK_LOG_TYPE = List.of(ModBlocks.DRECK_TALLOW_LOG.get(), ModBlocks.DRECK_TALLOW_WOOD.get(), ModBlocks.STRIPPED_DRECK_TALLOW_LOG.get(), ModBlocks.STRIPPED_DRECK_TALLOW_WOOD.get());
+
+    private static final List<ItemLike> DRECK_TALLOW_PLANKS = List.of(ModBlocks.DRECK_TALLOW_PLANK.get());
     public ModRecipeProvider(PackOutput pOutput) {
         super(pOutput);
     }
@@ -28,13 +29,13 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
     protected void buildRecipes(Consumer<FinishedRecipe> pWriter) {
 
         //------------------------------------------------------------------------------------------------------------
-        nineBlockStorageRecipes(pWriter, RecipeCategory.MISC, ModItems.NETHER_ANTHRACITE.get(), RecipeCategory.MISC, ModBlocks.NETHER_ANTHRACITE_BLOCK.get()
-            ,"inscribedbyancients:nether_anthracite", "inscribedbyancients:nether_anthracite", "inscribedbyancients:nether_anthracite_block", "inscribedbyancients:nether_anthracite");
-        oreBlasting(pWriter, NETHER_ANTHRACITE_ORE, RecipeCategory.MISC, ModItems.NETHER_ANTHRACITE.get(), 2F, 100, "inscribedbyancients:nether_anthracite");
-        oreSmelting(pWriter, NETHER_ANTHRACITE_ORE, RecipeCategory.MISC, ModItems.NETHER_ANTHRACITE.get(), 1.2F, 200, "inscribedbyancients:nether_anthracite");
+        nineBlockStorageRecipes(pWriter, RecipeCategory.MISC, ModItems.NETHER_ANTHRACITE.get(), RecipeCategory.MISC, ModBlocks.NETHER_ANTHRACITE_BLOCK.get());
+        oreBlasting(pWriter, NETHER_ANTHRACITE_ORE, RecipeCategory.MISC, ModItems.NETHER_ANTHRACITE.get(), 2F, 100, "nether_anthracite");
+        oreSmelting(pWriter, NETHER_ANTHRACITE_ORE, RecipeCategory.MISC, ModItems.NETHER_ANTHRACITE.get(), 1.2F, 200, "nether_anthracite");
 
-        oreSmelting(pWriter, METALLIC_ARTIFACTS, RecipeCategory.MISC, ModItems.ANCIENT_ALLOY.get(), 1.5F, 200, "inscribedbyancients:metallic_artifacts");
-        oreSmelting(pWriter, ORGANIC_ARTIFACTS, RecipeCategory.MISC, Items.CHARCOAL, 1.5F, 200, "inscribedbyancients:organic_artifacts");
+        oreSmelting(pWriter, METALLIC_ARTIFACTS, RecipeCategory.MISC, ModItems.ANCIENT_ALLOY.get(), 1.5F, 200, "metallic_artifacts");
+        oreSmelting(pWriter, ORGANIC_ARTIFACTS, RecipeCategory.MISC, Items.CHARCOAL, 1.5F, 200, "organic_artifacts");
+
         //------------------------------------------------------------------------------------------------------------
 
         /* EXAMPLE OF SHAPED AND SHAPELESS RECIPES
@@ -57,25 +58,12 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
     }
 
 
+    // --- Recipe Functions -------------------------------------------------------------------------------------------
+    /*
+        If I decide to put anything here, while it is somewhat detrimental that all recipes default to the 'minecraft'
+    namespace, the names are organized in a very methodic way to where modpack devs shouldnt have a such difficult time
+    adjusting anything that needs it.  Since it creates so much extra work just to get the crafting recipes in
+    MY namespace, I'll only do this for recipes that absolutely need to be in MY namespace.
+    */
 
-    protected static void oreSmelting(Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult,
-                                      float pExperience, int pCookingTIme, String pGroup) {
-        oreCooking(pFinishedRecipeConsumer, RecipeSerializer.SMELTING_RECIPE, pIngredients, pCategory, pResult,
-                pExperience, pCookingTIme, pGroup, "_from_smelting");
-    }
-
-    protected static void oreBlasting(Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult,
-                                      float pExperience, int pCookingTime, String pGroup) {
-        oreCooking(pFinishedRecipeConsumer, RecipeSerializer.BLASTING_RECIPE, pIngredients, pCategory, pResult,
-                pExperience, pCookingTime, pGroup, "_from_blasting");
-    }
-
-    protected static void oreCooking(Consumer<FinishedRecipe> pFinishedRecipeConsumer, RecipeSerializer<? extends AbstractCookingRecipe> pCookingSerializer,
-                                     List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult, float pExperience, int pCookingTime, String pGroup, String pRecipeName) {
-        for(ItemLike itemlike : pIngredients) {
-            SimpleCookingRecipeBuilder.generic(Ingredient.of(itemlike), pCategory, pResult, pExperience, pCookingTime,
-                            pCookingSerializer).group(pGroup).unlockedBy(getHasName(itemlike), has(itemlike))
-                    .save(pFinishedRecipeConsumer, InscribedbyAncients.MOD_ID + ":" + getItemName(pResult) + pRecipeName + "_" + getItemName(itemlike));
-        }
-    }
 }
