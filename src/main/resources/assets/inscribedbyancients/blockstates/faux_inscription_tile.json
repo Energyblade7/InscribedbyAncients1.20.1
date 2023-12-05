@@ -2,16 +2,16 @@
   "multipart": [
     {
       "apply": {
-        "model": "inscribedbyancients:block/inscribed_tile_mutable"
+        "model": "inscribedbyancients:block/inscribed_tile_block"
       },
       "when": {
         "north": "true",
-        "inscription_rarity": "mutable"
+        "inscription_state": "true"
       }
     },
     {
       "apply": {
-        "model": "inscribedbyancients:block/inscribed_tile_mutable"
+        "model": "inscribedbyancients:block/inscribed_tile_block"
       },
       "when": {
         "down": "false",
@@ -20,23 +20,23 @@
         "south": "false",
         "up": "false",
         "west": "false",
-        "inscription_rarity": "mutable"
+        "inscription_state": "true"
       }
     },
     {
       "apply": {
-        "model": "inscribedbyancients:block/inscribed_tile_mutable",
+        "model": "inscribedbyancients:block/inscribed_tile_block",
         "uvlock": true,
         "y": 90
       },
       "when": {
         "east": "true",
-        "inscription_rarity": "mutable"
+        "inscription_state": "true"
       }
     },
     {
       "apply": {
-        "model": "inscribedbyancients:block/inscribed_tile_mutable",
+        "model": "inscribedbyancients:block/inscribed_tile_block",
         "uvlock": true,
         "y": 90
       },
@@ -47,23 +47,23 @@
         "south": "false",
         "up": "false",
         "west": "false",
-        "inscription_rarity": "mutable"
+        "inscription_state": "true"
       }
     },
     {
       "apply": {
-        "model": "inscribedbyancients:block/inscribed_tile_mutable",
+        "model": "inscribedbyancients:block/inscribed_tile_block",
         "uvlock": true,
         "y": 180
       },
       "when": {
         "south": "true",
-        "inscription_rarity": "mutable"
+        "inscription_state": "true"
       }
     },
     {
       "apply": {
-        "model": "inscribedbyancients:block/inscribed_tile_mutable",
+        "model": "inscribedbyancients:block/inscribed_tile_block",
         "uvlock": true,
         "y": 180
       },
@@ -74,23 +74,23 @@
         "south": "false",
         "up": "false",
         "west": "false",
-        "inscription_rarity": "mutable"
+        "inscription_state": "true"
       }
     },
     {
       "apply": {
-        "model": "inscribedbyancients:block/inscribed_tile_mutable",
+        "model": "inscribedbyancients:block/inscribed_tile_block",
         "uvlock": true,
         "y": 270
       },
       "when": {
         "west": "true",
-        "inscription_rarity": "mutable"
+        "inscription_state": "true"
       }
     },
     {
       "apply": {
-        "model": "inscribedbyancients:block/inscribed_tile_mutable",
+        "model": "inscribedbyancients:block/inscribed_tile_block",
         "uvlock": true,
         "y": 270
       },
@@ -101,23 +101,23 @@
         "south": "false",
         "up": "false",
         "west": "false",
-        "inscription_rarity": "mutable"
+        "inscription_state": "true"
       }
     },
     {
       "apply": {
-        "model": "inscribedbyancients:block/inscribed_tile_mutable",
+        "model": "inscribedbyancients:block/inscribed_tile_block",
         "uvlock": true,
         "x": 270
       },
       "when": {
         "up": "true",
-        "inscription_rarity": "mutable"
+        "inscription_state": "true"
       }
     },
     {
       "apply": {
-        "model": "inscribedbyancients:block/inscribed_tile_mutable",
+        "model": "inscribedbyancients:block/inscribed_tile_block",
         "uvlock": true,
         "x": 270
       },
@@ -128,23 +128,23 @@
         "south": "false",
         "up": "false",
         "west": "false",
-        "inscription_rarity": "mutable"
+        "inscription_state": "true"
       }
     },
     {
       "apply": {
-        "model": "inscribedbyancients:block/inscribed_tile_mutable",
+        "model": "inscribedbyancients:block/inscribed_tile_block",
         "uvlock": true,
         "x": 90
       },
       "when": {
         "down": "true",
-        "inscription_rarity": "mutable"
+        "inscription_state": "true"
       }
     },
     {
       "apply": {
-        "model": "inscribedbyancients:block/inscribed_tile_mutable",
+        "model": "inscribedbyancients:block/inscribed_tile_block",
         "uvlock": true,
         "x": 90
       },
@@ -155,481 +155,7 @@
         "south": "false",
         "up": "false",
         "west": "false",
-        "inscription_rarity": "mutable"
-      }
-    },
-    {
-      "apply": {
-        "model": "inscribedbyancients:block/inscribed_tile_exotic"
-      },
-      "when": {
-        "north": "true",
-        "inscription_rarity": "exotic"
-      }
-    },
-    {
-      "apply": {
-        "model": "inscribedbyancients:block/inscribed_tile_exotic"
-      },
-      "when": {
-        "down": "false",
-        "east": "false",
-        "north": "false",
-        "south": "false",
-        "up": "false",
-        "west": "false",
-        "inscription_rarity": "exotic"
-      }
-    },
-    {
-      "apply": {
-        "model": "inscribedbyancients:block/inscribed_tile_exotic",
-        "uvlock": true,
-        "y": 90
-      },
-      "when": {
-        "east": "true",
-        "inscription_rarity": "exotic"
-      }
-    },
-    {
-      "apply": {
-        "model": "inscribedbyancients:block/inscribed_tile_exotic",
-        "uvlock": true,
-        "y": 90
-      },
-      "when": {
-        "down": "false",
-        "east": "false",
-        "north": "false",
-        "south": "false",
-        "up": "false",
-        "west": "false",
-        "inscription_rarity": "exotic"
-      }
-    },
-    {
-      "apply": {
-        "model": "inscribedbyancients:block/inscribed_tile_exotic",
-        "uvlock": true,
-        "y": 180
-      },
-      "when": {
-        "south": "true",
-        "inscription_rarity": "exotic"
-      }
-    },
-    {
-      "apply": {
-        "model": "inscribedbyancients:block/inscribed_tile_exotic",
-        "uvlock": true,
-        "y": 180
-      },
-      "when": {
-        "down": "false",
-        "east": "false",
-        "north": "false",
-        "south": "false",
-        "up": "false",
-        "west": "false",
-        "inscription_rarity": "exotic"
-      }
-    },
-    {
-      "apply": {
-        "model": "inscribedbyancients:block/inscribed_tile_exotic",
-        "uvlock": true,
-        "y": 270
-      },
-      "when": {
-        "west": "true",
-        "inscription_rarity": "exotic"
-      }
-    },
-    {
-      "apply": {
-        "model": "inscribedbyancients:block/inscribed_tile_exotic",
-        "uvlock": true,
-        "y": 270
-      },
-      "when": {
-        "down": "false",
-        "east": "false",
-        "north": "false",
-        "south": "false",
-        "up": "false",
-        "west": "false",
-        "inscription_rarity": "exotic"
-      }
-    },
-    {
-      "apply": {
-        "model": "inscribedbyancients:block/inscribed_tile_exotic",
-        "uvlock": true,
-        "x": 270
-      },
-      "when": {
-        "up": "true",
-        "inscription_rarity": "exotic"
-      }
-    },
-    {
-      "apply": {
-        "model": "inscribedbyancients:block/inscribed_tile_exotic",
-        "uvlock": true,
-        "x": 270
-      },
-      "when": {
-        "down": "false",
-        "east": "false",
-        "north": "false",
-        "south": "false",
-        "up": "false",
-        "west": "false",
-        "inscription_rarity": "exotic"
-      }
-    },
-    {
-      "apply": {
-        "model": "inscribedbyancients:block/inscribed_tile_exotic",
-        "uvlock": true,
-        "x": 90
-      },
-      "when": {
-        "down": "true",
-        "inscription_rarity": "exotic"
-      }
-    },
-    {
-      "apply": {
-        "model": "inscribedbyancients:block/inscribed_tile_exotic",
-        "uvlock": true,
-        "x": 90
-      },
-      "when": {
-        "down": "false",
-        "east": "false",
-        "north": "false",
-        "south": "false",
-        "up": "false",
-        "west": "false",
-        "inscription_rarity": "exotic"
-      }
-    },
-    {
-      "apply": {
-        "model": "inscribedbyancients:block/inscribed_tile_rare"
-      },
-      "when": {
-        "north": "true",
-        "inscription_rarity": "rare"
-      }
-    },
-    {
-      "apply": {
-        "model": "inscribedbyancients:block/inscribed_tile_rare"
-      },
-      "when": {
-        "down": "false",
-        "east": "false",
-        "north": "false",
-        "south": "false",
-        "up": "false",
-        "west": "false",
-        "inscription_rarity": "rare"
-      }
-    },
-    {
-      "apply": {
-        "model": "inscribedbyancients:block/inscribed_tile_rare",
-        "uvlock": true,
-        "y": 90
-      },
-      "when": {
-        "east": "true",
-        "inscription_rarity": "rare"
-      }
-    },
-    {
-      "apply": {
-        "model": "inscribedbyancients:block/inscribed_tile_rare",
-        "uvlock": true,
-        "y": 90
-      },
-      "when": {
-        "down": "false",
-        "east": "false",
-        "north": "false",
-        "south": "false",
-        "up": "false",
-        "west": "false",
-        "inscription_rarity": "rare"
-      }
-    },
-    {
-      "apply": {
-        "model": "inscribedbyancients:block/inscribed_tile_rare",
-        "uvlock": true,
-        "y": 180
-      },
-      "when": {
-        "south": "true",
-        "inscription_rarity": "rare"
-      }
-    },
-    {
-      "apply": {
-        "model": "inscribedbyancients:block/inscribed_tile_rare",
-        "uvlock": true,
-        "y": 180
-      },
-      "when": {
-        "down": "false",
-        "east": "false",
-        "north": "false",
-        "south": "false",
-        "up": "false",
-        "west": "false",
-        "inscription_rarity": "rare"
-      }
-    },
-    {
-      "apply": {
-        "model": "inscribedbyancients:block/inscribed_tile_rare",
-        "uvlock": true,
-        "y": 270
-      },
-      "when": {
-        "west": "true",
-        "inscription_rarity": "rare"
-      }
-    },
-    {
-      "apply": {
-        "model": "inscribedbyancients:block/inscribed_tile_rare",
-        "uvlock": true,
-        "y": 270
-      },
-      "when": {
-        "down": "false",
-        "east": "false",
-        "north": "false",
-        "south": "false",
-        "up": "false",
-        "west": "false",
-        "inscription_rarity": "rare"
-      }
-    },
-    {
-      "apply": {
-        "model": "inscribedbyancients:block/inscribed_tile_rare",
-        "uvlock": true,
-        "x": 270
-      },
-      "when": {
-        "up": "true",
-        "inscription_rarity": "rare"
-      }
-    },
-    {
-      "apply": {
-        "model": "inscribedbyancients:block/inscribed_tile_rare",
-        "uvlock": true,
-        "x": 270
-      },
-      "when": {
-        "down": "false",
-        "east": "false",
-        "north": "false",
-        "south": "false",
-        "up": "false",
-        "west": "false",
-        "inscription_rarity": "rare"
-      }
-    },
-    {
-      "apply": {
-        "model": "inscribedbyancients:block/inscribed_tile_rare",
-        "uvlock": true,
-        "x": 90
-      },
-      "when": {
-        "down": "true",
-        "inscription_rarity": "rare"
-      }
-    },
-    {
-      "apply": {
-        "model": "inscribedbyancients:block/inscribed_tile_rare",
-        "uvlock": true,
-        "x": 90
-      },
-      "when": {
-        "down": "false",
-        "east": "false",
-        "north": "false",
-        "south": "false",
-        "up": "false",
-        "west": "false",
-        "inscription_rarity": "rare"
-      }
-    },
-    {
-      "apply": {
-        "model": "inscribedbyancients:block/inscribed_tile_uncommon"
-      },
-      "when": {
-        "north": "true",
-        "inscription_rarity": "uncommon"
-      }
-    },
-    {
-      "apply": {
-        "model": "inscribedbyancients:block/inscribed_tile_uncommon"
-      },
-      "when": {
-        "down": "false",
-        "east": "false",
-        "north": "false",
-        "south": "false",
-        "up": "false",
-        "west": "false",
-        "inscription_rarity": "uncommon"
-      }
-    },
-    {
-      "apply": {
-        "model": "inscribedbyancients:block/inscribed_tile_uncommon",
-        "uvlock": true,
-        "y": 90
-      },
-      "when": {
-        "east": "true",
-        "inscription_rarity": "uncommon"
-      }
-    },
-    {
-      "apply": {
-        "model": "inscribedbyancients:block/inscribed_tile_uncommon",
-        "uvlock": true,
-        "y": 90
-      },
-      "when": {
-        "down": "false",
-        "east": "false",
-        "north": "false",
-        "south": "false",
-        "up": "false",
-        "west": "false",
-        "inscription_rarity": "uncommon"
-      }
-    },
-    {
-      "apply": {
-        "model": "inscribedbyancients:block/inscribed_tile_uncommon",
-        "uvlock": true,
-        "y": 180
-      },
-      "when": {
-        "south": "true",
-        "inscription_rarity": "uncommon"
-      }
-    },
-    {
-      "apply": {
-        "model": "inscribedbyancients:block/inscribed_tile_uncommon",
-        "uvlock": true,
-        "y": 180
-      },
-      "when": {
-        "down": "false",
-        "east": "false",
-        "north": "false",
-        "south": "false",
-        "up": "false",
-        "west": "false",
-        "inscription_rarity": "uncommon"
-      }
-    },
-    {
-      "apply": {
-        "model": "inscribedbyancients:block/inscribed_tile_uncommon",
-        "uvlock": true,
-        "y": 270
-      },
-      "when": {
-        "west": "true",
-        "inscription_rarity": "uncommon"
-      }
-    },
-    {
-      "apply": {
-        "model": "inscribedbyancients:block/inscribed_tile_uncommon",
-        "uvlock": true,
-        "y": 270
-      },
-      "when": {
-        "down": "false",
-        "east": "false",
-        "north": "false",
-        "south": "false",
-        "up": "false",
-        "west": "false",
-        "inscription_rarity": "uncommon"
-      }
-    },
-    {
-      "apply": {
-        "model": "inscribedbyancients:block/inscribed_tile_uncommon",
-        "uvlock": true,
-        "x": 270
-      },
-      "when": {
-        "up": "true",
-        "inscription_rarity": "uncommon"
-      }
-    },
-    {
-      "apply": {
-        "model": "inscribedbyancients:block/inscribed_tile_uncommon",
-        "uvlock": true,
-        "x": 270
-      },
-      "when": {
-        "down": "false",
-        "east": "false",
-        "north": "false",
-        "south": "false",
-        "up": "false",
-        "west": "false",
-        "inscription_rarity": "uncommon"
-      }
-    },
-    {
-      "apply": {
-        "model": "inscribedbyancients:block/inscribed_tile_uncommon",
-        "uvlock": true,
-        "x": 90
-      },
-      "when": {
-        "down": "true",
-        "inscription_rarity": "uncommon"
-      }
-    },
-    {
-      "apply": {
-        "model": "inscribedbyancients:block/inscribed_tile_uncommon",
-        "uvlock": true,
-        "x": 90
-      },
-      "when": {
-        "down": "false",
-        "east": "false",
-        "north": "false",
-        "south": "false",
-        "up": "false",
-        "west": "false",
-        "inscription_rarity": "uncommon"
+        "inscription_state": "true"
       }
     },
     {
@@ -638,7 +164,7 @@
       },
       "when": {
         "north": "true",
-        "inscription_rarity": "dull"
+        "inscription_state": "false"
       }
     },
     {
@@ -652,7 +178,7 @@
         "south": "false",
         "up": "false",
         "west": "false",
-        "inscription_rarity": "dull"
+        "inscription_state": "false"
       }
     },
     {
@@ -663,7 +189,7 @@
       },
       "when": {
         "east": "true",
-        "inscription_rarity": "dull"
+        "inscription_state": "false"
       }
     },
     {
@@ -679,7 +205,7 @@
         "south": "false",
         "up": "false",
         "west": "false",
-        "inscription_rarity": "dull"
+        "inscription_state": "false"
       }
     },
     {
@@ -690,7 +216,7 @@
       },
       "when": {
         "south": "true",
-        "inscription_rarity": "dull"
+        "inscription_state": "false"
       }
     },
     {
@@ -706,7 +232,7 @@
         "south": "false",
         "up": "false",
         "west": "false",
-        "inscription_rarity": "dull"
+        "inscription_state": "false"
       }
     },
     {
@@ -717,7 +243,7 @@
       },
       "when": {
         "west": "true",
-        "inscription_rarity": "dull"
+        "inscription_state": "false"
       }
     },
     {
@@ -733,7 +259,7 @@
         "south": "false",
         "up": "false",
         "west": "false",
-        "inscription_rarity": "dull"
+        "inscription_state": "false"
       }
     },
     {
@@ -744,7 +270,7 @@
       },
       "when": {
         "up": "true",
-        "inscription_rarity": "dull"
+        "inscription_state": "false"
       }
     },
     {
@@ -760,7 +286,7 @@
         "south": "false",
         "up": "false",
         "west": "false",
-        "inscription_rarity": "dull"
+        "inscription_state": "false"
       }
     },
     {
@@ -771,7 +297,7 @@
       },
       "when": {
         "down": "true",
-        "inscription_rarity": "dull"
+        "inscription_state": "false"
       }
     },
     {
@@ -787,7 +313,7 @@
         "south": "false",
         "up": "false",
         "west": "false",
-        "inscription_rarity": "dull"
+        "inscription_state": "false"
       }
     }
   ]

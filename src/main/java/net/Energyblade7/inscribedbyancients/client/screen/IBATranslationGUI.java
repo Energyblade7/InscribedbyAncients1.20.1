@@ -74,6 +74,7 @@ public class IBATranslationGUI extends Screen {
 
         super.render(pGuiGraphics, pMouseX, pMouseY, pPartialTick);
 
+        this.renderToggleEffect(pGuiGraphics);
         if(buttonSelected) this.renderGUIBrackets(pGuiGraphics);
     }
 
@@ -101,14 +102,22 @@ public class IBATranslationGUI extends Screen {
         pGuiGraphics.drawCenteredString(this.font, Component.translatable("menu.translation.completed").withStyle(IBAStyles.ETHER_GREEN), x_anchor + 100, y_anchor + 95, WHITE);
     }
 
+    private void renderToggleEffect(GuiGraphics pGuiGraphics) {
+        int x_centerAlignment = ((width - BACKGROUND_AREA[0]) / 2) - ( (15 * inscriptionPhrase.wordComponents().length) / 2);
+
+        for (int i = 0; i < inscriptionPhrase.wordComponents().length; ++i) {
+            if (ibaTranslationButtons[i].getToggleEffect()) pGuiGraphics.blit(TEXTURE, x_centerAlignment + (7 + i * 15) + 8, y_anchor + 73, 96, 136, 3, 3);
+        }
+    }
+
     private void renderGUIBrackets(GuiGraphics pGuiGraphics) {
-        int x_centerAlignment = ((width - BACKGROUND_AREA[0]) / 2) - (15 * (inscriptionPhrase.wordComponents().length / 2));
+        int x_centerAlignment = ((width - BACKGROUND_AREA[0]) / 2) - ( (15 * inscriptionPhrase.wordComponents().length) / 2);
 
         pGuiGraphics.pose().popPose();
         pGuiGraphics.pose().scale(GUI_SCALE, GUI_SCALE, GUI_SCALE);
 
         pGuiGraphics.blit(TEXTURE, x_anchor + 22, y_anchor + 91, 15, 179, 155, 7);
-        pGuiGraphics.blit(TEXTURE, x_centerAlignment + (this.bracketTarget * 15) + 2, y_anchor + 73, 81, 136, 13, 19);
+        pGuiGraphics.blit(TEXTURE, x_centerAlignment + (this.bracketTarget * 15) + 10, y_anchor + 73, 81, 136, 13, 19);
     }
 
     // --- Button Functions --------------------------------------------------------------------------------------------
@@ -125,7 +134,7 @@ public class IBATranslationGUI extends Screen {
                     buttonSelected = true;
                 }
 
-            }, null));
+            }, null, false));
     }
 
     private void initializeSubButtons(int pMainButton) {
@@ -144,7 +153,9 @@ public class IBATranslationGUI extends Screen {
                     this.inscriptionSuccessfullyTranslated();
                 }
 
-            }, translatedDictionaryEntry.translatedWord()));
+                this.ibaTranslationButtons[pMainButton].setToggleEffect(true);
+
+            }, translatedDictionaryEntry.translatedWord(), false));
         }
     }
 

@@ -25,11 +25,12 @@ public class IBAButton extends ImageButton {
     private final int yOffset;
     private final int yDiff;
     private String buttonText;
+    private Boolean toggleEffect;
 
 
     private ButtonSelector buttonSelector = ButtonSelector.DEFAULT;
 
-    public IBAButton(float guiScale, boolean initialVisibility, int pX, int pY, int pWidth, int pHeight, int pXTexStart, int pYTexStart, int yDiff, ResourceLocation pResourceLocation, OnPress pOnPress, @Nullable String buttonText) {
+    public IBAButton(float guiScale, boolean initialVisibility, int pX, int pY, int pWidth, int pHeight, int pXTexStart, int pYTexStart, int yDiff, ResourceLocation pResourceLocation, OnPress pOnPress, @Nullable String buttonText, Boolean toggleEffect) {
         super(pX, pY, pWidth, pHeight, pXTexStart, pYTexStart, pResourceLocation, pOnPress);
 
         IBAButton.guiScale = guiScale;
@@ -43,6 +44,7 @@ public class IBAButton extends ImageButton {
         this.buttonHeight = pHeight;
         this.visible = initialVisibility;
         this.buttonText = buttonText;
+        this.toggleEffect = toggleEffect;
     }
 
     private int getSelectorType(ButtonSelector pButtonSelector, int yDiff) {
@@ -102,6 +104,14 @@ public class IBAButton extends ImageButton {
 
     public void setButtonText(String buttonText) {
         this.buttonText = buttonText;
+    }
+
+    public Boolean getToggleEffect() {
+        return toggleEffect;
+    }
+
+    public void setToggleEffect(Boolean toggleEffect) {
+        this.toggleEffect = toggleEffect;
     }
 
 }
