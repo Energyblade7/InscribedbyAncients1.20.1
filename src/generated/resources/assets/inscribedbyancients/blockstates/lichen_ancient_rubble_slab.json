@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "inscribedbyancients:block/lichen_ancient_rubble_slab"
+    },
+    "type=double": {
+      "model": "inscribedbyancients:block/lichen_ancient_rubble"
+    },
+    "type=top": {
+      "model": "inscribedbyancients:block/lichen_ancient_rubble_slab_top"
+    }
+  }
+}

@@ -119,6 +119,105 @@ public class ModBlocks {
 
     // -----------------------------------------------------------------------------------------------------------------
 
+    public static final RegistryObject<Block> ANCIENT_BRICK = registerBlock("ancient_brick",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)
+                    .mapColor(MapColor.TERRACOTTA_BROWN)
+                    .strength(15F, 800F)
+                    .requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> CHISELED_ANCIENT_BRICK = registerBlock("chiseled_ancient_brick",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)
+                    .mapColor(MapColor.TERRACOTTA_BROWN)
+                    .strength(15F, 800F)
+                    .requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> ANCIENT_BRICK_STAIRS = registerBlock("ancient_brick_stairs",
+            () -> new StairBlock(() -> ModBlocks.ANCIENT_BRICK.get().defaultBlockState(),BlockBehaviour.Properties.copy(Blocks.BRICK_STAIRS)
+                    .mapColor(MapColor.TERRACOTTA_BROWN)
+                    .strength(15F, 800F)
+                    .requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> ANCIENT_BRICK_SLAB = registerBlock("ancient_brick_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)
+                    .mapColor(MapColor.TERRACOTTA_BROWN)
+                    .strength(15F, 800F)
+                    .requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> CRACKED_ANCIENT_BRICK = registerBlock("cracked_ancient_brick",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)
+                    .mapColor(MapColor.TERRACOTTA_BROWN)
+                    .strength(15F, 800F)
+                    .requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> LICHEN_ANCIENT_BRICK = registerBlock("lichen_ancient_brick",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)
+                    .mapColor(MapColor.TERRACOTTA_BROWN)
+                    .strength(15F, 800F)
+                    .requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> LICHEN_ANCIENT_BRICK_SLAB = registerBlock("lichen_ancient_brick_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)
+                    .mapColor(MapColor.TERRACOTTA_BROWN)
+                    .strength(15F, 800F)
+                    .requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> LICHEN_ANCIENT_BRICK_STAIRS = registerBlock("lichen_ancient_brick_stairs",
+            () -> new StairBlock(() -> ModBlocks.LICHEN_ANCIENT_BRICK.get().defaultBlockState(),BlockBehaviour.Properties.copy(Blocks.BRICK_STAIRS)
+                    .mapColor(MapColor.TERRACOTTA_BROWN)
+                    .strength(15F, 800F)
+                    .requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> ANCIENT_RUBBLE = registerBlock("ancient_rubble",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)
+                    .mapColor(MapColor.TERRACOTTA_BROWN)
+                    .strength(7.5F, 400F)
+                    .requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> ANCIENT_RUBBLE_SLAB = registerBlock("ancient_rubble_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)
+                    .mapColor(MapColor.TERRACOTTA_BROWN)
+                    .strength(7.5F, 400F)
+                    .requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> ANCIENT_RUBBLE_STAIRS = registerBlock("ancient_rubble_stairs",
+            () -> new StairBlock(() -> ModBlocks.ANCIENT_RUBBLE.get().defaultBlockState(),BlockBehaviour.Properties.copy(Blocks.BRICK_STAIRS)
+                    .mapColor(MapColor.TERRACOTTA_BROWN)
+                    .strength(7.5F, 400F)
+                    .requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> ANCIENT_TILE = registerBlock("ancient_tile",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)
+                    .mapColor(MapColor.TERRACOTTA_BROWN)
+                    .strength(7.5F, 400F)
+                    .requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> ANCIENT_TILE_SLAB = registerBlock("ancient_tile_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)
+                    .mapColor(MapColor.TERRACOTTA_BROWN)
+                    .strength(7.5F, 400F)
+                    .requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> ANCIENT_TILE_STAIRS = registerBlock("ancient_tile_stairs",
+            () -> new StairBlock(() -> ModBlocks.ANCIENT_RUBBLE.get().defaultBlockState(),BlockBehaviour.Properties.copy(Blocks.BRICK_STAIRS)
+                    .mapColor(MapColor.TERRACOTTA_BROWN)
+                    .strength(7.5F, 400F)
+                    .requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> LICHEN_ANCIENT_RUBBLE = registerBlock("lichen_ancient_rubble",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)
+                    .mapColor(MapColor.TERRACOTTA_BROWN)
+                    .strength(7.5F, 400F)
+                    .requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> LICHEN_ANCIENT_RUBBLE_SLAB = registerBlock("lichen_ancient_rubble_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)
+                    .mapColor(MapColor.TERRACOTTA_BROWN)
+                    .strength(7.5F, 400F)
+                    .requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> LICHEN_ANCIENT_RUBBLE_STAIRS = registerBlock("lichen_ancient_rubble_stairs",
+            () -> new StairBlock(() -> ModBlocks.ANCIENT_RUBBLE.get().defaultBlockState(),BlockBehaviour.Properties.copy(Blocks.BRICK_STAIRS)
+                    .mapColor(MapColor.TERRACOTTA_BROWN)
+                    .strength(7.5F, 400F)
+                    .requiresCorrectToolForDrops()));
+
+
 // --- Dreck Tallow Wood Items Register here ---------------------------------------------------------------------------
     public static final RegistryObject<Block> DRECK_TALLOW_LOG = registerBlock("dreck_tallow_log",
             () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG))

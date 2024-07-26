@@ -85,6 +85,26 @@ public class InscribedbyAncients
             event.accept(ModItems.GNARLED_EFFIGY);
             event.accept(ModItems.ANTIQUE_APPARATUS);
             event.accept(ModItems.DAMAGED_TABLET);
+            
+            
+            event.accept(ModBlocks.ANCIENT_BRICK.get());
+            event.accept(ModBlocks.ANCIENT_BRICK_SLAB.get());
+            event.accept(ModBlocks.ANCIENT_BRICK_STAIRS.get());
+            event.accept(ModBlocks.CRACKED_ANCIENT_BRICK.get());
+            event.accept(ModBlocks.CHISELED_ANCIENT_BRICK.get());
+            event.accept(ModBlocks.LICHEN_ANCIENT_BRICK.get());
+            event.accept(ModBlocks.LICHEN_ANCIENT_BRICK_SLAB.get());
+            event.accept(ModBlocks.LICHEN_ANCIENT_BRICK_STAIRS.get());
+            
+            event.accept(ModBlocks.ANCIENT_RUBBLE.get());
+            event.accept(ModBlocks.ANCIENT_RUBBLE_SLAB.get());
+            event.accept(ModBlocks.ANCIENT_RUBBLE_STAIRS.get());
+            event.accept(ModBlocks.ANCIENT_TILE.get());
+            event.accept(ModBlocks.ANCIENT_TILE_SLAB.get());
+            event.accept(ModBlocks.ANCIENT_TILE_STAIRS.get());
+            event.accept(ModBlocks.LICHEN_ANCIENT_RUBBLE.get());
+            event.accept(ModBlocks.LICHEN_ANCIENT_RUBBLE_SLAB.get());
+            event.accept(ModBlocks.LICHEN_ANCIENT_RUBBLE_STAIRS.get());
 
 
             event.accept(ModBlocks.RECLAIMED_DIRT);
@@ -147,6 +167,24 @@ public class InscribedbyAncients
             event.accept(ModBlocks.DRECK_TALLOW_FENCE);
             event.accept(ModBlocks.DRECK_TALLOW_FENCE_GATE);
 
+            event.accept(ModBlocks.ANCIENT_BRICK.get());
+            event.accept(ModBlocks.ANCIENT_BRICK_SLAB.get());
+            event.accept(ModBlocks.ANCIENT_BRICK_STAIRS.get());
+            event.accept(ModBlocks.CRACKED_ANCIENT_BRICK.get());
+            event.accept(ModBlocks.CHISELED_ANCIENT_BRICK.get());
+            event.accept(ModBlocks.LICHEN_ANCIENT_BRICK.get());
+            event.accept(ModBlocks.LICHEN_ANCIENT_BRICK_SLAB.get());
+            event.accept(ModBlocks.LICHEN_ANCIENT_BRICK_STAIRS.get());
+
+            event.accept(ModBlocks.ANCIENT_RUBBLE.get());
+            event.accept(ModBlocks.ANCIENT_RUBBLE_SLAB.get());
+            event.accept(ModBlocks.ANCIENT_RUBBLE_STAIRS.get());
+            event.accept(ModBlocks.ANCIENT_TILE.get());
+            event.accept(ModBlocks.ANCIENT_TILE_SLAB.get());
+            event.accept(ModBlocks.ANCIENT_TILE_STAIRS.get());
+            event.accept(ModBlocks.LICHEN_ANCIENT_RUBBLE.get());
+            event.accept(ModBlocks.LICHEN_ANCIENT_RUBBLE_SLAB.get());
+            event.accept(ModBlocks.LICHEN_ANCIENT_RUBBLE_STAIRS.get());
         }
 
         if(event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS){

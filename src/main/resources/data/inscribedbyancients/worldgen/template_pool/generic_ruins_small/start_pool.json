@@ -6,23 +6,14 @@
 
   "elements": [
     {
-
-
       "weight": 1,
       "element": {
-
-
         "location": "inscribedbyancients:generic_ruins_small",
-
-
-        "processors": "minecraft:empty",
-
-
+        "processors": "inscribedbyancients:archaeology_pit_smitheries",
         "projection": "rigid",
-
-
         "element_type": "minecraft:single_pool_element"
       }
     }
+
   ]
 }

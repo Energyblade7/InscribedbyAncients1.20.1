@@ -2,6 +2,7 @@ package net.Energyblade7.inscribedbyancients.client.screen;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 import net.Energyblade7.inscribedbyancients.InscribedbyAncients;
+import net.Energyblade7.inscribedbyancients.client.screen.library.IBAStyles;
 import net.Energyblade7.inscribedbyancients.client.screen.library.button.ButtonSelector;
 import net.Energyblade7.inscribedbyancients.client.screen.library.button.IBAButton;
 import net.Energyblade7.inscribedbyancients.util.translation.InscriptionPhrase;
@@ -20,14 +21,15 @@ public class IBATranslationGUI extends Screen {
     private static final ResourceLocation TEXTURE =
             new ResourceLocation(InscribedbyAncients.MOD_ID,"textures/gui/translation_menu.png");
 
-
+// Make buttons retain data after a resize - DO THIS AFTER FINAL / Add function to get player EXP if menu closes while translation is solved
     private static final float GUI_SCALE = 1.6F;
     private static final int[] BACKGROUND_AREA = {195, 134}; // {w, h}
     private static final int WHITE = 14737632;
 
 
     private static Boolean buttonSelected, completionNotify;
-    private int x_anchor, y_anchor, bracketTarget;
+    private int x_anchor, y_anchor, bracketTarget, buttonAlignment;
+    
     private IBAButton[] ibaTranslationButtons;
     private IBAButton[][] ibaSubButtons;
     private TranslationKey[] selectionKey;
@@ -50,6 +52,8 @@ public class IBATranslationGUI extends Screen {
         this.x_anchor = (int) (width /  (2 * GUI_SCALE)) - (BACKGROUND_AREA[0] / 2);
         this.y_anchor = (int) (height /  (2 * GUI_SCALE)) - (BACKGROUND_AREA[1] / 2);
 
+        this.buttonAlignment = x_anchor + 98 - (((15 * inscriptionPhrase.wordComponents().length ) - 2) / 2);
+
         this.ibaTranslationButtons = new IBAButton[inscriptionPhrase.wordComponents().length];
         this.ibaSubButtons = new IBAButton[inscriptionPhrase.wordComponents().length][3];
         this.selectionKey = new TranslationKey[inscriptionPhrase.wordComponents().length];
@@ -60,6 +64,7 @@ public class IBATranslationGUI extends Screen {
         }
 
     }
+
 
     @Override
     public void render(GuiGraphics pGuiGraphics, int pMouseX, int pMouseY, float pPartialTick) {
@@ -95,44 +100,38 @@ public class IBATranslationGUI extends Screen {
     }
 
     private void renderTranslationKey(GuiGraphics pGuiGraphics) {
-        pGuiGraphics.drawCenteredString(this.font, TranslationSystem.buildString(this.selectionKey, true), x_anchor + 100, y_anchor + 50, WHITE);
+        pGuiGraphics.drawCenteredString(this.font, TranslationSystem.buildString(this.selectionKey, true), x_anchor + 98, y_anchor + 50, WHITE);
     }
 
     private void renderCompletionMessage(GuiGraphics pGuiGraphics) {
-        pGuiGraphics.drawCenteredString(this.font, Component.translatable("menu.translation.completed").withStyle(IBAStyles.ETHER_GREEN), x_anchor + 100, y_anchor + 95, WHITE);
+        pGuiGraphics.drawCenteredString(this.font, Component.translatable("menu.translation.completed").withStyle(IBAStyles.ETHER_GREEN), x_anchor + 98, y_anchor + 95, WHITE);
     }
 
     private void renderToggleEffect(GuiGraphics pGuiGraphics) {
-        int x_centerAlignment = ((width - BACKGROUND_AREA[0]) / 2) - ( (15 * inscriptionPhrase.wordComponents().length) / 2);
-
         for (int i = 0; i < inscriptionPhrase.wordComponents().length; ++i) {
-            if (ibaTranslationButtons[i].getToggleEffect()) pGuiGraphics.blit(TEXTURE, x_centerAlignment + (7 + i * 15) + 8, y_anchor + 73, 96, 136, 3, 3);
+            if (ibaTranslationButtons[i].getToggleEffect()) pGuiGraphics.blit(TEXTURE, buttonAlignment + 5 + (15 * i), y_anchor + 73, 96, 136, 3, 3);
         }
     }
 
     private void renderGUIBrackets(GuiGraphics pGuiGraphics) {
-        int x_centerAlignment = ((width - BACKGROUND_AREA[0]) / 2) - ( (15 * inscriptionPhrase.wordComponents().length) / 2);
-
         pGuiGraphics.pose().popPose();
         pGuiGraphics.pose().scale(GUI_SCALE, GUI_SCALE, GUI_SCALE);
 
         pGuiGraphics.blit(TEXTURE, x_anchor + 22, y_anchor + 91, 15, 179, 155, 7);
-        pGuiGraphics.blit(TEXTURE, x_centerAlignment + (this.bracketTarget * 15) + 10, y_anchor + 73, 81, 136, 13, 19);
+        pGuiGraphics.blit(TEXTURE, buttonAlignment + (15 * this.bracketTarget), y_anchor + 73, 81, 136, 13, 19);
     }
 
     // --- Button Functions --------------------------------------------------------------------------------------------
 
     private void initializeTranslationButtons(int finalI){
-        int x_centerAlignment = ((width - BACKGROUND_AREA[0]) / 2) - ( (15 * inscriptionPhrase.wordComponents().length) / 2);
+        this.addIBAButton(finalI, ibaTranslationButtons ,new IBAButton(GUI_SCALE, true, buttonAlignment + (15 * finalI), y_anchor + 68, 13, 13, 15, 136, 14,TEXTURE, (button) -> {
 
-        this.addIBAButton(finalI, ibaTranslationButtons ,new IBAButton(GUI_SCALE, true,x_centerAlignment + (2 + finalI * 15) + 8, y_anchor + 68, 13, 13, 15, 136, 14,TEXTURE, (button) -> {
+            if (this.ibaTranslationButtons[finalI].getButtonSelector() == ButtonSelector.NEGATED) return;
 
-                if (this.ibaTranslationButtons[finalI].getButtonSelector() != ButtonSelector.NEGATED) {
-                    this.revealSubButtons(ibaSubButtons[finalI]);
-                    IBAButton.isSoloSelectionButton(finalI, inscriptionPhrase.wordComponents().length, ibaTranslationButtons);
-                    this.bracketTarget = finalI;
-                    buttonSelected = true;
-                }
+            this.revealSubButtons(ibaSubButtons[finalI]);
+            IBAButton.isSoloSelectionButton(finalI, inscriptionPhrase.wordComponents().length, ibaTranslationButtons);
+            this.bracketTarget = finalI;
+            buttonSelected = true;
 
             }, null, false));
     }
@@ -146,14 +145,14 @@ public class IBATranslationGUI extends Screen {
 
             this.addIBAButton(finalI ,ibaSubButtons[pMainButton] ,new IBAButton(GUI_SCALE, false,x_anchor + 22 + (finalI * 53), y_anchor + 96, 49, 13, 30, 136, 14,TEXTURE, (button) -> {
 
-                this.selectionKey[pMainButton] = translatedDictionaryEntry;
                 IBAButton.isSoloSelectionButton(finalI,3, ibaSubButtons[pMainButton]);
+                this.ibaTranslationButtons[pMainButton].setToggleEffect(true);
+
+                this.selectionKey[pMainButton] = translatedDictionaryEntry;
 
                 if (TranslationSystem.checkForCorrectness(inscriptionPhrase.wordComponents(), this.selectionKey)) {
                     this.inscriptionSuccessfullyTranslated();
                 }
-
-                this.ibaTranslationButtons[pMainButton].setToggleEffect(true);
 
             }, translatedDictionaryEntry.translatedWord(), false));
         }
@@ -196,6 +195,7 @@ public class IBATranslationGUI extends Screen {
             resetSubButtonGroup(this.ibaSubButtons[i]);
         }
 
+        assert minecraft != null;
         minecraft.getSoundManager().play(SimpleSoundInstance.forLocalAmbience(SoundEvents.PLAYER_LEVELUP, 1, 0.2F));
 
     }

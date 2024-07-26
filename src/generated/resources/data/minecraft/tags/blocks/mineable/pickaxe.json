@@ -5,6 +5,23 @@
     "inscribedbyancients:mossy_reclaimation",
     "inscribedbyancients:nether_anthracite_block",
     "inscribedbyancients:nether_anthracite_ore",
-    "inscribedbyancients:smoldering_nether_anthracite_ore"
+    "inscribedbyancients:smoldering_nether_anthracite_ore",
+    "inscribedbyancients:ancient_brick",
+    "inscribedbyancients:chiseled_ancient_brick",
+    "inscribedbyancients:ancient_brick_slab",
+    "inscribedbyancients:ancient_brick_stairs",
+    "inscribedbyancients:cracked_ancient_brick",
+    "inscribedbyancients:lichen_ancient_brick",
+    "inscribedbyancients:lichen_ancient_brick_slab",
+    "inscribedbyancients:lichen_ancient_brick_stairs",
+    "inscribedbyancients:ancient_rubble",
+    "inscribedbyancients:ancient_rubble_slab",
+    "inscribedbyancients:ancient_rubble_stairs",
+    "inscribedbyancients:ancient_tile",
+    "inscribedbyancients:ancient_tile_slab",
+    "inscribedbyancients:ancient_tile_stairs",
+    "inscribedbyancients:lichen_ancient_rubble",
+    "inscribedbyancients:lichen_ancient_rubble_slab",
+    "inscribedbyancients:lichen_ancient_rubble_stairs"
   ]
 }

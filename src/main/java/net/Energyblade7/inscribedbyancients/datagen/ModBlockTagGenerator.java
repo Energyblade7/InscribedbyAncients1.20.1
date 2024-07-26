@@ -30,7 +30,27 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
 
                 .add(ModBlocks.NETHER_ANTHRACITE_BLOCK.get())
                 .add(ModBlocks.NETHER_ANTHRACITE_ORE.get())
-                .add(ModBlocks.SMOLDERING_NETHER_ANTHRACITE_ORE.get());
+                .add(ModBlocks.SMOLDERING_NETHER_ANTHRACITE_ORE.get())
+
+                .add(ModBlocks.ANCIENT_BRICK.get())
+                .add(ModBlocks.CHISELED_ANCIENT_BRICK.get())
+                .add(ModBlocks.ANCIENT_BRICK_SLAB.get())
+                .add(ModBlocks.ANCIENT_BRICK_STAIRS.get())
+                .add(ModBlocks.CRACKED_ANCIENT_BRICK.get())
+                .add(ModBlocks.LICHEN_ANCIENT_BRICK.get())
+                .add(ModBlocks.LICHEN_ANCIENT_BRICK_SLAB.get())
+                .add(ModBlocks.LICHEN_ANCIENT_BRICK_STAIRS.get())
+
+                .add(ModBlocks.ANCIENT_RUBBLE.get())
+                .add(ModBlocks.ANCIENT_RUBBLE_SLAB.get())
+                .add(ModBlocks.ANCIENT_RUBBLE_STAIRS.get())
+                .add(ModBlocks.ANCIENT_TILE.get())
+                .add(ModBlocks.ANCIENT_TILE_SLAB.get())
+                .add(ModBlocks.ANCIENT_TILE_STAIRS.get())
+                .add(ModBlocks.LICHEN_ANCIENT_RUBBLE.get())
+                .add(ModBlocks.LICHEN_ANCIENT_RUBBLE_SLAB.get())
+                .add(ModBlocks.LICHEN_ANCIENT_RUBBLE_STAIRS.get());
+
 
 
         this.tag(BlockTags.MINEABLE_WITH_SHOVEL)

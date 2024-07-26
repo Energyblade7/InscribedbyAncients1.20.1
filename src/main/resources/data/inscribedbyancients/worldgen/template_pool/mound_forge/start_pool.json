@@ -1,0 +1,27 @@
+{
+  "name": "inscribedbyancients:mound_forge/start_pool",
+
+
+  "fallback": "minecraft:empty",
+
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "location": "inscribedbyancients:mound_forge/mound_forge_court",
+        "processors": "inscribedbyancients:archaeology_pit_smitheries",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "inscribedbyancients:mound_forge/mound_forge_columns",
+        "processors": "inscribedbyancients:archaeology_pit_smitheries",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}

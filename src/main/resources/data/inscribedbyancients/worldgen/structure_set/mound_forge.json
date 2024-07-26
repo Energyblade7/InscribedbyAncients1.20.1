@@ -1,0 +1,17 @@
+{
+  "structures": [
+    {
+      "structure": "inscribedbyancients:mound_forge",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "salt": 17776342214,
+
+    "spacing": 30,
+
+    "separation": 10,
+
+    "type": "minecraft:random_spread"
+  }
+}

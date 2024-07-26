@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "inscribedbyancients:block/ancient_tile",
+    "side": "inscribedbyancients:block/ancient_tile",
+    "top": "inscribedbyancients:block/ancient_tile"
+  }
+}

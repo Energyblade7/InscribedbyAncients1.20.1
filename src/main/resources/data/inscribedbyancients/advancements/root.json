@@ -12,7 +12,7 @@
     "frame": "task",
     "show_toast": true,
     "announce_to_chat": false,
-    "background": "inscribedbyancients:textures/block/inscribed_cracked_stone_bricks.png"
+    "background": "inscribedbyancients:textures/block/cracked_ancient_brick.png"
   },
   "criteria": {
     "killed_by_something": {

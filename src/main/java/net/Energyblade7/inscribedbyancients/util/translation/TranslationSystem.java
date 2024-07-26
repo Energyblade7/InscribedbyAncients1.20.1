@@ -3,7 +3,6 @@ package net.Energyblade7.inscribedbyancients.util.translation;
 
 import net.minecraft.network.chat.Component;
 
-import java.awt.*;
 import java.util.Objects;
 import java.util.Random;
 

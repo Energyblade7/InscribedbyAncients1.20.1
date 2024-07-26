@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "inscribedbyancients:block/ancient_tile_slab"
+    },
+    "type=double": {
+      "model": "inscribedbyancients:block/ancient_tile"
+    },
+    "type=top": {
+      "model": "inscribedbyancients:block/ancient_tile_slab_top"
+    }
+  }
+}

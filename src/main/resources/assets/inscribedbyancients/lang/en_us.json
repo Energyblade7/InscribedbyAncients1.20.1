@@ -92,6 +92,25 @@
   "block.inscribedbyancients.dreck_tallow_fence": "Dreck Tallow Fence",
   "block.inscribedbyancients.dreck_tallow_fence_gate": "Dreck Tallow Fence Gate",
 
+  "block.inscribedbyancients.ancient_brick": "Ancient Brick",
+  "block.inscribedbyancients.ancient_brick_stairs": "Ancient Brick Stairs",
+  "block.inscribedbyancients.ancient_brick_slab": "Ancient Brick Slab",
+  "block.inscribedbyancients.cracked_ancient_brick": "Cracked Ancient Brick",
+  "block.inscribedbyancients.chiseled_ancient_brick": "Chiseled Ancient Brick",
+  "block.inscribedbyancients.lichen_ancient_brick": "Lichen Brick",
+  "block.inscribedbyancients.lichen_ancient_brick_stairs": "Lichen Brick Stairs",
+  "block.inscribedbyancients.lichen_ancient_brick_slab": "Lichen Brick Slab",
+  "block.inscribedbyancients.ancient_rubble": "Ancient Rubble",
+  "block.inscribedbyancients.ancient_tile": "Ancient Tile",
+  "block.inscribedbyancients.ancient_tile_slab": "Ancient Tile Slab",
+  "block.inscribedbyancients.ancient_tile_stairs": "Ancient Tile Stairs",
+  "block.inscribedbyancients.ancient_rubble_slab": "Ancient Rubble Slab",
+  "block.inscribedbyancients.ancient_rubble_stairs": "Ancient Rubble Stairs",
+  "block.inscribedbyancients.lichen_ancient_rubble": "Lichen Rubble",
+  "block.inscribedbyancients.lichen_ancient_rubble_slab": "Lichen Rubble Slab",
+  "block.inscribedbyancients.lichen_ancient_rubble_stairs": "Lichen Rubble Stairs",
+
+
 
 
   "advancements.inscribedbyancients.root.title": "Inscribed by Ancients",

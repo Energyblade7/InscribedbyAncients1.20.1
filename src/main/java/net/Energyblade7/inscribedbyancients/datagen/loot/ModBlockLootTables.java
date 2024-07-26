@@ -59,6 +59,31 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.DRECK_TALLOW_FENCE.get());
         this.dropSelf(ModBlocks.DRECK_TALLOW_FENCE_GATE.get());
 
+        this.dropSelf(ModBlocks.ANCIENT_BRICK.get());
+        this.dropSelf(ModBlocks.CHISELED_ANCIENT_BRICK.get());
+        this.dropSelf(ModBlocks.CRACKED_ANCIENT_BRICK.get());
+        this.dropSelf(ModBlocks.LICHEN_ANCIENT_BRICK.get());
+        this.dropSelf(ModBlocks.ANCIENT_BRICK_STAIRS.get());
+        this.dropSelf(ModBlocks.LICHEN_ANCIENT_BRICK_STAIRS.get());
+        this.add(ModBlocks.ANCIENT_BRICK_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.ANCIENT_BRICK_SLAB.get()));
+        this.add(ModBlocks.LICHEN_ANCIENT_BRICK_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.LICHEN_ANCIENT_BRICK_SLAB.get()));
+
+        this.dropSelf(ModBlocks.ANCIENT_RUBBLE.get());
+        this.dropSelf(ModBlocks.ANCIENT_TILE.get());
+        this.dropSelf(ModBlocks.LICHEN_ANCIENT_RUBBLE.get());
+        this.dropSelf(ModBlocks.ANCIENT_RUBBLE_STAIRS.get());
+        this.dropSelf(ModBlocks.ANCIENT_TILE_STAIRS.get());
+        this.dropSelf(ModBlocks.LICHEN_ANCIENT_RUBBLE_STAIRS.get());
+        this.add(ModBlocks.ANCIENT_RUBBLE_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.ANCIENT_RUBBLE_SLAB.get()));
+        this.add(ModBlocks.ANCIENT_TILE_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.ANCIENT_TILE_SLAB.get()));
+        this.add(ModBlocks.LICHEN_ANCIENT_RUBBLE_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.LICHEN_ANCIENT_RUBBLE_SLAB.get()));
+
+
     }
 
     // -----------------------------------------------------------------------------------------------------------------

@@ -72,6 +72,45 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(ModBlocks.DRECK_TALLOW_FENCE_GATE);
 
         blockItem(ModBlocks.INSCRIBED_TILE); //Remove later, will likely have a custom tool, or 2D texture to pair with this
+        
+
+        blockWithItem(ModBlocks.ANCIENT_BRICK);
+        blockWithItem(ModBlocks.CHISELED_ANCIENT_BRICK);
+        blockWithItem(ModBlocks.ANCIENT_RUBBLE);
+        blockWithItem(ModBlocks.ANCIENT_TILE);
+        blockWithItem(ModBlocks.CRACKED_ANCIENT_BRICK);
+        blockWithItem(ModBlocks.LICHEN_ANCIENT_BRICK);
+        blockWithItem(ModBlocks.LICHEN_ANCIENT_RUBBLE);
+        
+        stairsBlock((StairBlock) ModBlocks.ANCIENT_BRICK_STAIRS.get(), blockTexture(ModBlocks.ANCIENT_BRICK.get()));
+        blockItem(ModBlocks.ANCIENT_BRICK_STAIRS);
+
+        stairsBlock((StairBlock) ModBlocks.ANCIENT_RUBBLE_STAIRS.get(), blockTexture(ModBlocks.ANCIENT_RUBBLE.get()));
+        blockItem(ModBlocks.ANCIENT_RUBBLE_STAIRS);
+        
+        slabBlock((SlabBlock) ModBlocks.ANCIENT_RUBBLE_SLAB.get(), blockTexture(ModBlocks.ANCIENT_RUBBLE.get()), blockTexture(ModBlocks.ANCIENT_RUBBLE.get()));
+        blockItem(ModBlocks.ANCIENT_RUBBLE_SLAB);
+
+        stairsBlock((StairBlock) ModBlocks.ANCIENT_TILE_STAIRS.get(), blockTexture(ModBlocks.ANCIENT_TILE.get()));
+        blockItem(ModBlocks.ANCIENT_TILE_STAIRS);
+
+        slabBlock((SlabBlock) ModBlocks.ANCIENT_TILE_SLAB.get(), blockTexture(ModBlocks.ANCIENT_TILE.get()), blockTexture(ModBlocks.ANCIENT_TILE.get()));
+        blockItem(ModBlocks.ANCIENT_TILE_SLAB);
+
+        stairsBlock((StairBlock) ModBlocks.LICHEN_ANCIENT_RUBBLE_STAIRS.get(), blockTexture(ModBlocks.LICHEN_ANCIENT_RUBBLE.get()));
+        blockItem(ModBlocks.LICHEN_ANCIENT_RUBBLE_STAIRS);
+
+        slabBlock((SlabBlock) ModBlocks.LICHEN_ANCIENT_RUBBLE_SLAB.get(), blockTexture(ModBlocks.LICHEN_ANCIENT_RUBBLE.get()), blockTexture(ModBlocks.LICHEN_ANCIENT_RUBBLE.get()));
+        blockItem(ModBlocks.LICHEN_ANCIENT_RUBBLE_SLAB);
+
+        slabBlock((SlabBlock) ModBlocks.ANCIENT_BRICK_SLAB.get(), blockTexture(ModBlocks.ANCIENT_BRICK.get()), blockTexture(ModBlocks.ANCIENT_BRICK.get()));
+        blockItem(ModBlocks.ANCIENT_BRICK_SLAB);
+
+        stairsBlock((StairBlock) ModBlocks.LICHEN_ANCIENT_BRICK_STAIRS.get(), blockTexture(ModBlocks.LICHEN_ANCIENT_BRICK.get()));
+        blockItem(ModBlocks.LICHEN_ANCIENT_BRICK_STAIRS);
+
+        slabBlock((SlabBlock) ModBlocks.LICHEN_ANCIENT_BRICK_SLAB.get(), blockTexture(ModBlocks.LICHEN_ANCIENT_BRICK.get()), blockTexture(ModBlocks.LICHEN_ANCIENT_BRICK.get()));
+        blockItem(ModBlocks.LICHEN_ANCIENT_BRICK_SLAB);
     }
 
     // --- Helper Functions -------------------------------------------------------------------------------------------

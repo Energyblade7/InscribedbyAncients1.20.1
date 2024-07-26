@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "inscribedbyancients:block/lichen_ancient_brick_slab"
+    },
+    "type=double": {
+      "model": "inscribedbyancients:block/lichen_ancient_brick"
+    },
+    "type=top": {
+      "model": "inscribedbyancients:block/lichen_ancient_brick_slab_top"
+    }
+  }
+}

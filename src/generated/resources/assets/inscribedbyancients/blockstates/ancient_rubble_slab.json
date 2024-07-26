@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "inscribedbyancients:block/ancient_rubble_slab"
+    },
+    "type=double": {
+      "model": "inscribedbyancients:block/ancient_rubble"
+    },
+    "type=top": {
+      "model": "inscribedbyancients:block/ancient_rubble_slab_top"
+    }
+  }
+}

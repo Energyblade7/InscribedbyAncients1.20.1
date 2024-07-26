@@ -1,4 +1,4 @@
-package net.Energyblade7.inscribedbyancients.client.screen;
+package net.Energyblade7.inscribedbyancients.client.screen.library;
 
 import net.Energyblade7.inscribedbyancients.InscribedbyAncients;
 import net.minecraft.network.chat.Style;
